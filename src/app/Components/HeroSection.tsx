@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 const HeroSection = () => {
     return (
         <div className="flex flex-col items-center justify-center bg-white py-12 md:py-24">
@@ -10,7 +12,13 @@ const HeroSection = () => {
                     </button>
                 </div>
                 <div className="md:w-1/2 flex justify-center mt-8 md:mt-0">
-                    <img src="/path/to/hero-image.png" alt="Fitness Training" className="w-full max-w-md" />
+                    <Image
+                        src="/path/to/hero-image.png" // Adjust the path as needed
+                        alt="Fitness Training"
+                        width={400} // Provide a width value (adjust as necessary)
+                        height={300} // Provide a height value (adjust as necessary)
+                        className="w-full max-w-md"
+                    />
                 </div>
             </div>
         </div>
