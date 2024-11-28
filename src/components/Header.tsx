@@ -42,7 +42,6 @@ const Header = () => {
                     aria-modal="true"
                 >
                     <div className="absolute right-0 top-0 h-full w-full md:w-[300px] max-w-sm bg-white shadow-lg p-6 overflow-y-auto">
-                        {/* モーダルヘッダー */}
                         <div className="w-full flex justify-between items-center mb-4">
                             <div className="flex items-center">
                                 <Image
