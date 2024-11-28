@@ -24,17 +24,27 @@ const HeroSection = () => {
                         className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4 md:px-12">
                         <h2 className="text-5xl md:text-6xl font-bold leading-tight">INSIDE</h2>
                         <h2 className="text-5xl md:text-6xl font-bold leading-tight">AND OUT.</h2>
-                        <p className="noto-sans-jp text-sm md:text-base mt-4">
-                            継続しやすさNo.1を目指して、あなたの美しさと健康をサポートします。
+                        <p className="text-lg md:text-3xl font-bold mt-4">
+                            人生を変える
                         </p>
                         <div className="mt-6">
-                            <button
-                                className="noto-sans-jp px-8 py-3 bg-primary text-on-primary text-sm md:text-base rounded-md hover:bg-primary">
-                                初回体験 0円
-                            </button>
+                            <div
+                                className="noto-sans-jp px-6 py-2 bg-primary text-on-primary text-sm md:text-base rounded-full shadow-md">
+                                月額 ¥14,900～
+                            </div>
                         </div>
                     </div>
+                    <p className="text-white absolute bottom-4 right-4 noto-sans-jp text-sm md:text-base  text-right leading-relaxed hidden md:block">
+                        継続しやすさNo.1を目指して、<br/>
+                        あなたの美しさと健康をサポートします。
+                    </p>
                 </div>
+            </div>
+            <div className="mt-4 px-4 md:hidden text-center">
+                <p className="noto-sans-jp text-sm text-secondary leading-relaxed">
+                    継続しやすさNo.1を目指して、<br/>
+                    あなたの美しさと健康をサポートします。
+                </p>
             </div>
         </div>
     );
