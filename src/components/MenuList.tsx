@@ -21,8 +21,8 @@ const MenuList = () => (
                 key={index}
                 className="flex justify-between items-center border-b border-gray-300 pb-2"
             >
-                <span className="text-sm text-red-500">{item.en}</span>
-                <span className="text-base font-medium text-gray-800">{item.jp}</span>
+                <span className="noto-sans text-sm text-as-primary">{item.en}</span>
+                <span className="noto-sans-jp text-base font-medium text-gray-800">{item.jp}</span>
             </li>
         ))}
     </ul>

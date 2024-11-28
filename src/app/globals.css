@@ -3,14 +3,61 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  --background: #F2FBFD;
+  /*--background: #9CC1C4;*/
+  /*--background: #F8FAFB;*/
   --foreground: #171717;
+
+  /* 背景色 */
+  --primary: #3AB0DC;
+  --primary-hover: #359CC8;
+  --secondary: #2D3D8A;
+  --secondary-hover: #4652A4;
+  --accent: #FF6F41;
+  --accent-hover: #FF5A2E;
+
+  /* テキスト色 */
+  --text-primary: #171717;
+  --text-secondary: #6D6D6D;
+
+  /* 背景色に対する文字色 */
+  --text-on-primary: #FFFFFF;
+  --text-on-secondary: #FFFFFF;
+  --text-on-accent: #FFFFFF;
+
+  /* アクセントとしての文字色 */
+  --text-as-primary: #3AB0DC;
+  --text-as-secondary: #2D3D8A;
+  --text-as-accent: #FF6F41;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #121212;
+    /*--background: #1A1A1A;*/
+    --foreground: #F2FBFD;
+
+    /* 背景色 */
+    --primary: #2D93C5;
+    --primary-hover: #3CA6D8;
+    --secondary: #4652A4;
+    --secondary-hover: #5A6BBA;
+    --accent: #FF8860;
+    --accent-hover: #FF5E3D;
+
+    /* テキスト色 */
+    --text-primary: #FFFFFF;
+    --text-secondary: #B0B0B0;
+
+    /* 背景色に対する文字色 */
+    --text-on-primary: #FFFFFF;
+    --text-on-secondary: #FFFFFF;
+    --text-on-accent: #FFFFFF;
+
+    /* アクセントとしての文字色 */
+    --text-as-primary: #2D93C5;
+    --text-as-secondary: #4652A4;
+    --text-as-accent: #FF8860;
   }
 }
 
@@ -19,3 +66,76 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* 背景色 */
+.bg-root {
+  background-color: var(--background);
+}
+.bg-primary {
+  background-color: var(--primary);
+}
+.bg-primary:hover {
+  background-color: var(--primary-hover);
+}
+.bg-secondary {
+  background-color: var(--secondary);
+}
+.bg-accent {
+  background-color: var(--accent);
+}
+.bg-accent:hover {
+  background-color: var(--accent-hover);
+}
+
+/* テキスト色 */
+.text-primary {
+  color: var(--text-primary);
+}
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+/* 背景色に対する文字色 */
+.text-on-primary {
+  color: var(--text-on-primary);
+}
+.text-on-secondary {
+  color: var(--text-on-secondary);
+}
+.text-on-accent {
+  color: var(--text-on-accent);
+}
+
+/* アクセントとしての文字色 */
+.text-as-primary {
+  color: var(--text-as-primary);
+}
+.text-as-secondary {
+  color: var(--text-as-secondary);
+}
+.text-as-accent {
+  color: var(--text-as-accent);
+}
+
+/* ボーダー色 */
+.border-primary {
+  border-color: var(--primary);
+}
+.border-accent {
+  border-color: var(--accent);
+}
+
+/* ホバー用 */
+.hover\:bg-primary:hover {
+  background-color: var(--primary-hover);
+}
+.hover\:text-primary:hover {
+  color: var(--primary-hover);
+}
+
+/* 透明度 */
+.bg-primary-opacity {
+  background-color: rgba(58, 176, 220, 0.8);
+}
+
+
