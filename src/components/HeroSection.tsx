@@ -3,10 +3,10 @@ const HeroSection = () => {
         <div>
             {/* 上部キャッチコピー */}
             <div className="text-center py-8">
-                <p className="zen-old-mincho font-bold text-xs">
+                <p className="zen-old-mincho font-[700] text-xs mb-1">
                     Your True Beauty and Strength
                 </p>
-                <h1 className="zen-old-mincho text-5xl font-extrabold">
+                <h1 className="zen-old-mincho text-5xl font-[800]">
                     <span className="block">あなた本来の</span>
                     <span className="block">美しさと強さを</span>
                 </h1>
