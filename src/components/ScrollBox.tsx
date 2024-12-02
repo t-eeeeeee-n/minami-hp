@@ -36,7 +36,7 @@ const ScrollBox = () => {
                             className="material-symbols-outlined text-as-primary text-xl md:text-4xl">{item.icon}</span>
                     </div>
                     {/* テキスト */}
-                    <p className="text-center text-as-primary text-sm md:mt-2">
+                    <p className="noto-sans-jp text-center text-as-primary text-sm md:mt-2">
                         {item.text}
                     </p>
                     {/* 下矢印 */}
