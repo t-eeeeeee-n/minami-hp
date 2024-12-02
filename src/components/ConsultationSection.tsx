@@ -31,7 +31,7 @@ const ConcernsSection = () => {
             </div>
 
             {/* 下部のリスト */}
-            <div className="mt-8 max-w-5xl mx-auto px-4">
+            <div className="mt-8 max-w-5xl mx-auto md:px-4">
                 <div className="bg-primary shadow-md rounded-lg p-6">
                     <h3 className="noto-sans-jp text-on-primary text-2xl font-semibold text-center mb-6">こんなお悩みはありませんか？</h3>
                     <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-gray-700 text-md md:text-lg leading-relaxed">

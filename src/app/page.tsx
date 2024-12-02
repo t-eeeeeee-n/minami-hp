@@ -9,7 +9,7 @@ export default function HomePage() {
     return (
 
         <div className="min-h-screen">
-            <div className="">
+            <div className="pb-12">
                 <HeroSection/>
             </div>
             <div className="bg-white py-12">
