@@ -15,7 +15,7 @@ export default function HomePage() {
             <div className="bg-white py-12">
                 <ScrollBox/>
             </div>
-            <div className="py-16 md:px-12">
+            <div id="about-us" className="py-16 md:px-12">
                 <AboutSection/>
             </div>
             <div className="bg-white py-16 md:px-12">

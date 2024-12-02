@@ -4,7 +4,7 @@ import React from 'react';
 
 // アイテムデータ
 const items = [
-    { id: "person", icon: "store", text: "INOUTとは" },
+    { id: "about-us", icon: "person", text: "INOUTとは" },
     { id: "program", icon: "edit", text: "プログラム" },
     { id: "reason", icon: "flag_2", text: "選ばれる理由" },
     { id: "flow", icon: "play_circle", text: "お申し込みの流れ" },
