@@ -29,19 +29,19 @@ const HeroSection = () => {
                         </p>
                         <div className="mt-6">
                             <div
-                                className="noto-sans-jp px-6 py-2 bg-primary text-on-primary text-sm md:text-base rounded-full shadow-md">
+                                className="px-6 py-2 bg-primary text-on-primary text-sm md:text-base rounded-full shadow-md">
                                 月額 ¥14,900～
                             </div>
                         </div>
                     </div>
-                    <p className="text-white absolute bottom-4 right-4 noto-sans-jp text-sm md:text-base  text-right leading-relaxed hidden md:block">
+                    <p className="text-white absolute bottom-4 right-4 text-sm md:text-base  text-right leading-relaxed hidden md:block">
                         継続しやすさNo.1を目指して、<br/>
                         あなたの美しさと健康をサポートします。
                     </p>
                 </div>
             </div>
             <div className="mt-4 px-4 md:hidden text-center">
-                <p className="noto-sans-jp text-sm text-secondary leading-relaxed">
+                <p className="text-sm text-secondary leading-relaxed">
                     継続しやすさNo.1を目指して、<br/>
                     あなたの美しさと健康をサポートします。
                 </p>

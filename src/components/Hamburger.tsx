@@ -67,7 +67,7 @@ const Hamburger: FC<HamburgerProps> = ({isOpen, toggleMenu}) => {
                                 }}
                             >
                                 <span className="noto-sans text-sm text-as-primary uppercase">{item.en}</span>
-                                <span className="noto-sans-jp text-base font-medium text-primary">{item.jp}</span>
+                                <span className="text-base font-medium text-primary">{item.jp}</span>
                             </li>
                         ))}
                     </ul>

@@ -53,12 +53,12 @@ const ConcernsSection = () => {
 
             <div className="mt-8 max-w-5xl mx-auto md:px-4 mb-8">
                 <div className="bg-primary shadow-md rounded-lg p-6">
-                    <h3 className="noto-sans-jp text-on-primary text-2xl font-semibold text-center mb-6">こんなお悩みはありませんか？</h3>
+                    <h3 className="text-on-primary text-2xl font-semibold text-center mb-6">こんなお悩みはありませんか？</h3>
                     <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-gray-700 text-md md:text-lg leading-relaxed">
                         {concerns.map((concern, index) => (
                             <li key={index} className="flex items-start space-x-2">
                                 <span className="material-symbols-outlined text-as-secondary pt-0.5">task_alt</span>
-                                <span className="noto-sans-jp text-on-primary">{concern}</span>
+                                <span className="text-on-primary">{concern}</span>
                             </li>
                         ))}
                     </ul>
@@ -83,7 +83,7 @@ const ConcernsSection = () => {
                         <div
                             className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center md:opacity-0 md:group-hover:opacity-100 transition duration-300"
                         >
-                            <h3 className="noto-sans-jp text-white text-xl font-semibold">{card.title}</h3>
+                            <h3 className="text-white text-xl font-semibold">{card.title}</h3>
                         </div>
                     </div>
                 ))}

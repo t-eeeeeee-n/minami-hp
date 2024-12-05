@@ -14,7 +14,7 @@ const AboutSection = () => {
                         <><span className="noto-sans">INOUT</span>とは</>
                     }
                 />
-                <p className="noto-sans-jp text-sm md:text-md leading-relaxed">
+                <p className="text-sm md:text-md leading-relaxed">
                     パーソナルトレーナーとマンツーマンで
                     <span className="text-as-primary">自分の身体を鍛え</span>、
                     <span className="text-as-primary">成功を積み重ね</span>、

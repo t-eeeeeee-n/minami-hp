@@ -65,7 +65,7 @@ const ReasonSection = () => {
                         </div>
 
                         {/* タイトル */}
-                        <p className="noto-sans-jp text-sm md:text-base font-medium mt-4 whitespace-pre-line">
+                        <p className="text-sm md:text-base font-bold mt-4 whitespace-pre-line">
                             {reason.title}
                         </p>
                     </div>
