@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 
 const ConcernsSection = () => {
     // お悩みリストデータ
@@ -13,9 +14,29 @@ const ConcernsSection = () => {
         "継続ができない…",
     ];
 
+    const cards = [
+        {
+            imgSrc: "https://minami-hp.s3.ap-northeast-1.amazonaws.com/warrior.avif",
+            alt: "痩せたい方",
+            title: "痩せたい方",
+            objectPosition: "50% 20%",
+        },
+        {
+            imgSrc: "https://minami-hp.s3.ap-northeast-1.amazonaws.com/weightlifting.avif",
+            alt: "筋肉をつけたい方",
+            title: "筋肉をつけたい方",
+            objectPosition: "50% 15%",
+        },
+        {
+            imgSrc: "https://minami-hp.s3.ap-northeast-1.amazonaws.com/stretch.avif",
+            alt: "運動不足を解消したい方",
+            title: "運動不足を解消したい方",
+            objectPosition: "50% 30%",
+        },
+    ];
+
     return (
-        <section className="px-6">
-            {/* 上部の画像とテキスト */}
+        <div className="px-6">
             <div
                 className="relative bg-cover bg-center h-[300px] md:h-[400px]"
                 style={{ backgroundImage: "url('https://minami-hp.s3.ap-northeast-1.amazonaws.com/consultation.avif')" }}
@@ -30,8 +51,7 @@ const ConcernsSection = () => {
                 </div>
             </div>
 
-            {/* 下部のリスト */}
-            <div className="mt-8 max-w-5xl mx-auto md:px-4">
+            <div className="mt-8 max-w-5xl mx-auto md:px-4 mb-8">
                 <div className="bg-primary shadow-md rounded-lg p-6">
                     <h3 className="noto-sans-jp text-on-primary text-2xl font-semibold text-center mb-6">こんなお悩みはありませんか？</h3>
                     <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-gray-700 text-md md:text-lg leading-relaxed">
@@ -44,7 +64,31 @@ const ConcernsSection = () => {
                     </ul>
                 </div>
             </div>
-        </section>
+
+            <div className="flex flex-col md:grid md:grid-cols-3 gap-8">
+                {cards.map((card, index) => (
+                    <div
+                        key={index}
+                        className="group relative overflow-hidden rounded-lg shadow-lg h-40 lg:h-80"
+                    >
+                        <Image
+                            src={card.imgSrc}
+                            alt={card.alt}
+                            priority
+                            width={500}
+                            height={500}
+                            className="w-full h-full object-cover transform group-hover:scale-110 transition duration-300 "
+                            style={{objectPosition: card.objectPosition}}
+                        />
+                        <div
+                            className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center md:opacity-0 md:group-hover:opacity-100 transition duration-300"
+                        >
+                            <h3 className="noto-sans-jp text-white text-xl font-semibold">{card.title}</h3>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
     );
 };
 

@@ -4,6 +4,7 @@ import Testimonials from "@/components/Testimonials";
 import ScrollBox from "@/components/ScrollBox";
 import AboutSection from "@/components/AboutSection";
 import ConcernsSection from "@/components/ConsultationSection";
+import BeforeAfterSection from "@/components/BeforeAfterSection";
 
 export default function HomePage() {
     return (
@@ -20,6 +21,9 @@ export default function HomePage() {
             </div>
             <div className="bg-white py-16 md:px-12">
                 <ConcernsSection/>
+            </div>
+            <div id="about-us" className="py-16 md:px-12">
+                <BeforeAfterSection/>
             </div>
             <StrengthPoints/>
             <Testimonials/>

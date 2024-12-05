@@ -1,35 +1,12 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 
 const AboutSection = () => {
-    // カードデータを定義
-    const cards = [
-        {
-            imgSrc: "https://minami-hp.s3.ap-northeast-1.amazonaws.com/warrior.avif",
-            alt: "痩せたい方",
-            title: "痩せたい方",
-            objectPosition: "50% 20%",
-        },
-        {
-            imgSrc: "https://minami-hp.s3.ap-northeast-1.amazonaws.com/weightlifting.avif",
-            alt: "筋肉をつけたい方",
-            title: "筋肉をつけたい方",
-            objectPosition: "50% 15%",
-        },
-        {
-            imgSrc: "https://minami-hp.s3.ap-northeast-1.amazonaws.com/stretch.avif",
-            alt: "運動不足を解消したい方",
-            title: "運動不足を解消したい方",
-            objectPosition: "50% 30%",
-        },
-    ];
 
     return (
         <div className="px-6">
-            {/* 上部テキスト */}
-            <div className="text-center max-w-4xl mx-auto mb-8">
+            <div className="text-center max-w-4xl mx-auto">
                 <h2 className="noto-sans-jp text-2xl md:text-3xl font-bold mb-6">
                     <span className="noto-sans">INOUT</span>とは
                 </h2>
@@ -66,31 +43,6 @@ const AboutSection = () => {
                     <span className="text-as-primary">より多くの方に幸せと健康を届けさせて頂ければな</span>
                     と思います。
                 </p>
-            </div>
-
-            {/* カードセクション */}
-            <div className="flex flex-col md:grid md:grid-cols-3 gap-8">
-                {cards.map((card, index) => (
-                    <div
-                        key={index}
-                        className="group relative overflow-hidden rounded-lg shadow-lg h-40 lg:h-80"
-                    >
-                        <Image
-                            src={card.imgSrc}
-                            alt={card.alt}
-                            priority
-                            width={500}
-                            height={500}
-                            className="w-full h-full object-cover transform group-hover:scale-110 transition duration-300 "
-                            style={{objectPosition: card.objectPosition}}
-                        />
-                        <div
-                            className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center md:opacity-0 md:group-hover:opacity-100 transition duration-300"
-                        >
-                            <h3 className="noto-sans-jp text-white text-xl font-semibold">{card.title}</h3>
-                        </div>
-                    </div>
-                ))}
             </div>
         </div>
     );
