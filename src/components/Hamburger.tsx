@@ -31,7 +31,7 @@ const Hamburger: FC<HamburgerProps> = ({isOpen, toggleMenu}) => {
             aria-modal="true"
         >
             <div
-                className="absolute bg-root right-0 top-0 h-full w-full md:w-[300px] shadow-lg p-6 overflow-y-auto">
+                className="absolute bg-root right-0 top-0 h-full w-full md:w-[350px] shadow-lg p-6 overflow-y-auto">
                 <div className="w-full flex justify-between items-center mb-4">
                     <div
                         className="flex items-center cursor-pointer"
@@ -66,7 +66,7 @@ const Hamburger: FC<HamburgerProps> = ({isOpen, toggleMenu}) => {
                                     toggleMenu()
                                 }}
                             >
-                                <span className="noto-sans text-sm text-as-primary">{item.en}</span>
+                                <span className="noto-sans text-sm text-as-primary uppercase">{item.en}</span>
                                 <span className="noto-sans-jp text-base font-medium text-primary">{item.jp}</span>
                             </li>
                         ))}

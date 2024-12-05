@@ -1,15 +1,19 @@
 "use client";
 
 import React from "react";
+import SectionTitle from "@/components/section/SectionTitle";
 
 const AboutSection = () => {
 
     return (
         <div className="px-6">
             <div className="text-center max-w-4xl mx-auto">
-                <h2 className="noto-sans-jp text-2xl md:text-3xl font-bold mb-6">
-                    <span className="noto-sans">INOUT</span>とは
-                </h2>
+                <SectionTitle
+                    label="About us"
+                    title={
+                        <><span className="noto-sans">INOUT</span>とは</>
+                    }
+                />
                 <p className="noto-sans-jp text-sm md:text-md leading-relaxed">
                     パーソナルトレーナーとマンツーマンで
                     <span className="text-as-primary">自分の身体を鍛え</span>、
