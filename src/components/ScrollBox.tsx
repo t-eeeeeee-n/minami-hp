@@ -1,6 +1,7 @@
 "use client"
 
 import React from 'react';
+import {handleScroll} from "@/utils/globalActions";
 
 // アイテムデータ
 const items = [
@@ -13,13 +14,6 @@ const items = [
 ];
 
 const ScrollBox = () => {
-    const handleScroll = (id: string) => {
-        const targetElement = document.getElementById(id);
-        if (targetElement) {
-            targetElement.scrollIntoView({ behavior: "smooth" });
-        }
-    };
-
     return (<div className="container md:mx-auto flex justify-center flex-wrap">
             {items.map((item) => (
                 <div

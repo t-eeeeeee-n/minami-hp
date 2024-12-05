@@ -1,6 +1,6 @@
-import './globals.css';
-import './globalicons.css';
-import './globalFont.css'
+import '@/styles/globals.css';
+import '@/styles/globalicons.css';
+import '@/styles/globalFont.css'
 import { Metadata } from 'next';
 import React from "react";
 import Header from "@/components/Header";
