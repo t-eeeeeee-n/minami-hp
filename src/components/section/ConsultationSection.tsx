@@ -36,7 +36,7 @@ const ConcernsSection = () => {
     ];
 
     return (
-        <div className="px-6">
+        <div className="px-6 md:px-0">
             <div
                 className="relative bg-cover bg-center h-[300px] md:h-[400px]"
                 style={{ backgroundImage: "url('https://minami-hp.s3.ap-northeast-1.amazonaws.com/consultation.avif')" }}
@@ -51,7 +51,7 @@ const ConcernsSection = () => {
                 </div>
             </div>
 
-            <div className="mt-8 max-w-5xl mx-auto md:px-4 mb-8">
+            <div className="mt-8 max-w-5xl mx-auto md:px-0 mb-8">
                 <div className="bg-primary shadow-md rounded-lg p-6">
                     <h3 className="text-on-primary text-2xl font-semibold text-center mb-6">こんなお悩みはありませんか？</h3>
                     <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-gray-700 text-md md:text-lg leading-relaxed">

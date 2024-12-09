@@ -5,8 +5,8 @@ import SectionTitle from "@/components/section/SectionTitle";
 
 const AboutSection = () => {
     return (
-        <div className="px-6">
-            <div className="md:text-center max-w-4xl mx-auto">
+        <div className="px-6 md:px-0">
+            <div className="md:text-center mx-auto">
                 <SectionTitle label="About us">
                     <span className="noto-sans">INOUT</span>とは
                 </SectionTitle>

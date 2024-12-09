@@ -161,8 +161,32 @@ body {
   }
 }
 
+@keyframes slideVertical {
+  0%, 100% {
+    transform: translateY(-7px);
+  }
+  50% {
+    transform: translateY(7px);
+  }
+}
+
+@keyframes slideBorder {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
 @layer utilities {
   .animate-slide-horizontal {
     animation: slideHorizontal 1s infinite;
+  }
+  .animate-slide-vertical {
+    animation: slideVertical 1s infinite;
+  }
+  .animate-slide-border {
+    animation: slideBorder 1s ease-in-out forwards;
   }
 }

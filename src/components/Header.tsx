@@ -21,6 +21,7 @@ const Header = () => {
                 <Image
                     src="https://minami-hp.s3.ap-northeast-1.amazonaws.com/S__389940471.jpg"
                     alt="Logo"
+                    priority
                     width={25}
                     height={25}
                     className="mr-2"

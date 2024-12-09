@@ -14,9 +14,9 @@ const BeforeAfterSection = () => {
             beforeImg: "https://minami-hp.s3.ap-northeast-1.amazonaws.com/S__16252982.avif",
             afterImg: "https://minami-hp.s3.ap-northeast-1.amazonaws.com/S__16252984.avif",
             results: [
-                { label: "体重", value: "- 6.3kg" },
-                { label: "ウエスト", value: "- 10cm" },
-                { label: "体脂肪", value: "- 4.2%" },
+                { label: "体重", value: "- 6.3", unit: "kg" },
+                { label: "ウエスト", value: "- 10", unit: "cm" },
+                { label: "体脂肪", value: "- 4.2", unit: "%" },
             ],
         },
         {
@@ -26,29 +26,30 @@ const BeforeAfterSection = () => {
             beforeImg: "https://minami-hp.s3.ap-northeast-1.amazonaws.com/S__16252985.avif",
             afterImg: "https://minami-hp.s3.ap-northeast-1.amazonaws.com/S__16252986.avif",
             results: [
-                { label: "体重", value: "- 4.5kg" },
-                { label: "ウエスト", value: "- 8cm" },
-                { label: "体脂肪", value: "- 3.2%" },
+                { label: "体重", value: "- 4.5", unit: "kg" },
+                { label: "ウエスト", value: "- 8", unit: "cm" },
+                { label: "体脂肪", value: "- 3.2", unit: "%" },
             ],
         },
     ];
 
     return (
-        <div>
-            <div className="text-center mt-8 max-w-5xl mx-auto md:px-4 mb-8">
+        <div className="px-6 md:px-0">
+            <div className="text-center max-w-5xl mx-auto">
                 <SectionTitle label="Before・After">ビフォー・アフター</SectionTitle>
                 <div className="container mx-auto">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                         {data.map((item, index) => (
                             <div
                                 key={index}
-                                className="text-center p-6 rounded-md"
+                                className="text-center rounded-md"
                             >
                                 <div className="flex items-center justify-center space-x-4 mb-6">
                                     <div className="relative w-1/2 rounded-md overflow-hidden">
                                         <Image
                                             src={item.beforeImg}
                                             alt="Before"
+                                            priority
                                             width={500}
                                             height={500}
                                             className="w-full h-full object-cover"
@@ -66,6 +67,7 @@ const BeforeAfterSection = () => {
                                         <Image
                                             src={item.afterImg}
                                             alt="After"
+                                            priority
                                             width={500}
                                             height={500}
                                             className="w-full h-full object-cover"
@@ -77,7 +79,7 @@ const BeforeAfterSection = () => {
                                     </div>
                                 </div>
 
-                                <p className="text-lg font-bold text-secondary mb-4">
+                                <p className="text-md font-bold text-secondary mb-4">
                                     {item.name} {item.age}歳 {item.height}
                                 </p>
 
@@ -85,10 +87,13 @@ const BeforeAfterSection = () => {
                                     {item.results.map((result, idx) => (
                                         <div
                                             key={idx}
-                                            className="flex justify-between w-48 bg-primary px-4 py-2 rounded-3xl shadow-lg"
+                                            className="flex gap-x-7 justify-center items-center w-48 bg-primary px-4 py-2 rounded-3xl"
                                         >
-                                            <span className="text-on-primary">{result.label}</span>
-                                            <span className="font-bold text-on-primary">{result.value}</span>
+                                            <span className="text-on-primary text-sm">{result.label}</span>
+                                            <span className="font-bold text-on-primary text-2xl">
+                                                {result.value}
+                                                <span className="text-on-primary text-sm ml-1">{result.unit}</span>
+                                            </span>
                                         </div>
                                     ))}
                                 </div>

@@ -28,14 +28,14 @@ const reasons = [
 
 const ReasonSection = () => {
     return (
-        <div className="py-12 px-6">
+        <div className="px-6 md:px-0">
             <SectionTitle label="Reason">
                 <span className="noto-sans">INOUT</span>が選ばれる<br/>
                 <span className="text-primary text-xl font-bold"><span className="text-as-primary text-3xl">4</span>つの理由</span>
             </SectionTitle>
             {/* メソッドリスト */}
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-3xl lg:max-w-5xl mx-auto"
-                 style={{ placeItems: "center" }}>
+                 style={{placeItems: "center"}}>
                 {reasons.map((reason) => (
                     <div
                         key={reason.id}
@@ -43,15 +43,18 @@ const ReasonSection = () => {
                     >
                         {/* 番号 */}
                         <div
-                            className="absolute top-0 left-0 w-8 h-8 md:w-16 md:h-16 text-as-primary text-xl md:text-3xl font-bold flex items-center justify-center rounded-full z-10">
+                            className="absolute top-0 left-0 w-8 h-8 md:w-16 md:h-16 text-as-primary text-xl md:text-3xl font-bold flex items-center justify-center rounded-full z-10"
+                        >
                             {reason.id < 10 ? `0${reason.id}` : reason.id}
                         </div>
 
                         {/* 画像 */}
-                        <div className="relative w-36 h-36 sm:w-48 sm:h-48 lg:w-56 lg:h-56 rounded-full overflow-hidden shadow-lg">
+                        <div
+                            className="relative w-36 h-36 sm:w-48 sm:h-48 lg:w-56 lg:h-56 rounded-full overflow-hidden shadow-lg">
                             <Image
                                 src={reason.imgSrc}
                                 alt={reason.title}
+                                priority
                                 width={500}
                                 height={500}
                                 className="w-full h-full object-cover"
@@ -68,7 +71,7 @@ const ReasonSection = () => {
 
             <div className="text-center mt-12">
                 <button
-                    className="px-8 py-3 bg-accent text-on-accent rounded-md shadow hover:bg-secondary-dark transition">
+                    className="px-8 py-3 bg-accent text-on-accent rounded-3xl shadow hover:bg-secondary-dark transition">
                     詳しくはこちら
                 </button>
             </div>

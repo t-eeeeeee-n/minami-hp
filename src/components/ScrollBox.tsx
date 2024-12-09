@@ -14,7 +14,8 @@ const items = [
 ];
 
 const ScrollBox = () => {
-    return (<div className="container md:mx-auto flex justify-center flex-wrap">
+    return (
+        <div className="px-6 md:mx-auto flex justify-center flex-wrap">
             {items.map((item) => (
                 <div
                     key={item.id}

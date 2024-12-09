@@ -6,6 +6,7 @@ import AboutSection from "@/components/section/AboutSection";
 import ConcernsSection from "@/components/section/ConsultationSection";
 import BeforeAfterSection from "@/components/section/BeforeAfterSection";
 import ReasonSection from "@/components/section/ReasonSection";
+import ApplyFlow from "@/components/section/ApplyFlow";
 
 export default function HomePage() {
     return (
@@ -28,6 +29,9 @@ export default function HomePage() {
             </div>
             <div id="reason" className="bg-white py-16 md:px-12">
                 <ReasonSection/>
+            </div>
+            <div id="apply-flow" className="py-16 md:px-12">
+                <ApplyFlow/>
             </div>
             <StrengthPoints/>
             <Testimonials/>
