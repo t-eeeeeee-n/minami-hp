@@ -29,16 +29,10 @@ const reasons = [
 const ReasonSection = () => {
     return (
         <div className="py-12 px-6">
-            <SectionTitle
-                label="Reason"
-                title={
-                    <>
-                        <span className="noto-sans">INOUT</span>が選ばれる<br/>
-                        <span className="text-primary text-xl font-bold"><span className="text-as-primary text-3xl">4</span>つの理由</span>
-                    </>
-                }
-            />
-
+            <SectionTitle label="Reason">
+                <span className="noto-sans">INOUT</span>が選ばれる<br/>
+                <span className="text-primary text-xl font-bold"><span className="text-as-primary text-3xl">4</span>つの理由</span>
+            </SectionTitle>
             {/* メソッドリスト */}
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-3xl lg:max-w-5xl mx-auto"
                  style={{ placeItems: "center" }}>
@@ -65,7 +59,7 @@ const ReasonSection = () => {
                         </div>
 
                         {/* タイトル */}
-                        <p className="text-sm md:text-base font-bold mt-4 whitespace-pre-line">
+                        <p className="h-12 text-sm md:text-base font-bold mt-4 whitespace-pre-line">
                             {reason.title}
                         </p>
                     </div>

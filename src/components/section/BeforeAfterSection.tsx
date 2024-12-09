@@ -36,12 +36,7 @@ const BeforeAfterSection = () => {
     return (
         <div>
             <div className="text-center mt-8 max-w-5xl mx-auto md:px-4 mb-8">
-                <SectionTitle
-                    label="Before・After"
-                    title={
-                        <>ビフォー・アフター</>
-                    }
-                />
+                <SectionTitle label="Before・After">ビフォー・アフター</SectionTitle>
                 <div className="container mx-auto">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                         {data.map((item, index) => (
