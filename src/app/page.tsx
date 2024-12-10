@@ -7,34 +7,48 @@ import ConcernsSection from "@/components/section/ConsultationSection";
 import BeforeAfterSection from "@/components/section/BeforeAfterSection";
 import ReasonSection from "@/components/section/ReasonSection";
 import ApplyFlow from "@/components/section/ApplyFlow";
+import FadeIn from "@/components/FadeIn";
 
 export default function HomePage() {
     return (
-
         <div className="min-h-screen">
             <div id="home" className="pb-12">
-                <HeroSection/>
+                <HeroSection />
             </div>
             <div className="bg-white py-12">
-                <ScrollBox/>
+                <ScrollBox />
             </div>
             <div id="about-us" className="py-16 md:px-12">
-                <AboutSection/>
+                <FadeIn>
+                    <AboutSection />
+                </FadeIn>
             </div>
             <div className="bg-white py-16 md:px-12">
-                <ConcernsSection/>
+                <FadeIn>
+                    <ConcernsSection />
+                </FadeIn>
             </div>
             <div id="before-after" className="py-16 md:px-12">
-                <BeforeAfterSection/>
+                <FadeIn>
+                    <BeforeAfterSection />
+                </FadeIn>
             </div>
             <div id="reason" className="bg-white py-16 md:px-12">
-                <ReasonSection/>
+                <FadeIn>
+                    <ReasonSection />
+                </FadeIn>
             </div>
             <div id="apply-flow" className="py-16 md:px-12">
-                <ApplyFlow/>
+                <FadeIn>
+                    <ApplyFlow />
+                </FadeIn>
             </div>
-            <StrengthPoints/>
-            <Testimonials/>
+            <FadeIn>
+                <StrengthPoints />
+            </FadeIn>
+            <FadeIn>
+                <Testimonials />
+            </FadeIn>
         </div>
     );
 }

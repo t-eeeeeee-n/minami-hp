@@ -66,14 +66,14 @@ const ApplyFlow = () => {
                                 </h3>
                                 <p className="text-gray-700 leading-7">{step.description}</p>
                             </div>
-                            <div className="md:w-1/4 md:p-2">
+                            <div className="md:w-1/4 px-6 pb-6 md:p-0">
                                 <Image
                                     src={step.imageSrc}
                                     alt={`Step ${step.id}`}
                                     priority
                                     width={500}
                                     height={500}
-                                    className="object-cover rounded-2xl md:rounded-none"
+                                    className="object-cover md:rounded-none"
                                 />
                             </div>
                         </div>
