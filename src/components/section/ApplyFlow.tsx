@@ -58,13 +58,13 @@ const ApplyFlow = () => {
                         <div
                             className={`flex flex-col md:flex-row ${
                                 index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                            } items-center md:p-6 rounded-2xl shadow bg-white border-2 border-primary`}
+                            } items-center md:p-6 rounded-2xl bg-white border-2 border-primary`}
                         >
                             <div className="md:w-3/4 p-6 rounded-lg">
-                                <h3 className="text-xl font-bold text-center mb-6 md:mb-4 border-primary border-b-2">
+                                <h3 className="text-md font-bold text-center mb-6 md:mb-4 border-primary border-b-2">
                                     <span>{step.title}</span>
                                 </h3>
-                                <p className="text-gray-700 leading-7">{step.description}</p>
+                                <p className="leading-6 text-xs">{step.description}</p>
                             </div>
                             <div className="md:w-1/4 px-6 pb-6 md:p-0">
                                 <Image
