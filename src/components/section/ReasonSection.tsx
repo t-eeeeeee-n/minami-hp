@@ -34,7 +34,7 @@ const ReasonSection = () => {
                 <span className="text-primary text-xl font-bold"><span className="text-as-primary text-3xl">4</span>つの理由</span>
             </SectionTitle>
             {/* メソッドリスト */}
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-3xl lg:max-w-5xl mx-auto"
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-3xl lg:max-w-5xl mx-auto mb-12"
                  style={{placeItems: "center"}}>
                 {reasons.map((reason) => (
                     <div
@@ -50,7 +50,7 @@ const ReasonSection = () => {
 
                         {/* 画像 */}
                         <div
-                            className="relative w-36 h-36 sm:w-48 sm:h-48 lg:w-56 lg:h-56 rounded-full overflow-hidden shadow-lg">
+                            className="relative mb-4 w-36 h-36 sm:w-48 sm:h-48 lg:w-56 lg:h-56 rounded-full overflow-hidden shadow-lg">
                             <Image
                                 src={reason.imgSrc}
                                 alt={reason.title}
@@ -62,14 +62,14 @@ const ReasonSection = () => {
                         </div>
 
                         {/* タイトル */}
-                        <p className="h-12 text-sm md:text-base font-bold mt-4 whitespace-pre-line">
+                        <p className="h-12 text-sm md:text-base font-bold whitespace-pre-line">
                             {reason.title}
                         </p>
                     </div>
                 ))}
             </div>
 
-            <div className="text-center mt-12">
+            <div className="text-center">
                 <button
                     className="px-8 py-3 bg-accent text-on-accent rounded-3xl shadow hover:bg-secondary-dark transition">
                     詳しくはこちら
