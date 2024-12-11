@@ -13,7 +13,7 @@
   --primary-hover: #359CC8;
   --secondary: #2D3D8A;
   --secondary-hover: #4652A4;
-  --accent: #FF6F41;
+  --accent: #E85E36;
   --accent-hover: #FF5A2E;
   --white: #FFFFFF;
 
@@ -29,7 +29,7 @@
   /* アクセントとしての文字色 */
   --text-as-primary: #3AB0DC;
   --text-as-secondary: #2D3D8A;
-  --text-as-accent: #FF6F41;
+  --text-as-accent: #E85E36;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -43,7 +43,7 @@
     --primary-hover: #3CA6D8;
     --secondary: #4652A4;
     --secondary-hover: #5A6BBA;
-    --accent: #FF8860;
+    --accent: #E85E36;
     --accent-hover: #FF5E3D;
     --white: #000000;
 
@@ -59,7 +59,7 @@
     /* アクセントとしての文字色 */
     --text-as-primary: #2D93C5;
     --text-as-secondary: #4652A4;
-    --text-as-accent: #FF8860;
+    --text-as-accent: #E85E36;
   }
 }
 

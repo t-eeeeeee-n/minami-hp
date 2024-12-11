@@ -16,7 +16,7 @@ const HeroSection = () => {
 
             <div className="flex justify-center">
                 <div
-                    className="relative bg-cover bg-center h-[300px] md:h-[500px] w-full max-w-6xl md:mx-20 rounded-[36px]"
+                    className="relative bg-cover bg-center h-[300px] md:h-[500px] w-full md:rounded-[36px]"
                     style={{
                         backgroundImage: `url('https://minami-hp.s3.ap-northeast-1.amazonaws.com/test.jpg')`,
                     }}

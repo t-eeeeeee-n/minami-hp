@@ -28,7 +28,7 @@ const reasons = [
 
 const ReasonSection = () => {
     return (
-        <div className="px-6 md:px-0">
+        <div>
             <SectionTitle label="Reason">
                 <span className="noto-sans">INOUT</span>が選ばれる<br/>
                 <span className="text-primary text-xl font-bold"><span className="text-as-primary text-3xl">4</span>つの理由</span>
@@ -50,7 +50,7 @@ const ReasonSection = () => {
 
                         {/* 画像 */}
                         <div
-                            className="relative mb-4 w-36 h-36 sm:w-48 sm:h-48 lg:w-56 lg:h-56 rounded-full overflow-hidden shadow-lg">
+                            className="relative mb-4 w-36 h-36 sm:w-52 sm:h-52 lg:w-36 lg:h-36 rounded-full overflow-hidden shadow-lg">
                             <Image
                                 src={reason.imgSrc}
                                 alt={reason.title}

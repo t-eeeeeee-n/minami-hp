@@ -34,7 +34,7 @@ const BeforeAfterSection = () => {
     ];
 
     return (
-        <div className="px-6 md:px-0">
+        <div>
             <div className="text-center max-w-5xl mx-auto">
                 <SectionTitle label="Before・After">ビフォー・アフター</SectionTitle>
                 <div className="container mx-auto">
@@ -79,7 +79,7 @@ const BeforeAfterSection = () => {
                                     </div>
                                 </div>
 
-                                <p className="text-md font-bold text-secondary mb-4">
+                                <p className="text-base font-bold text-secondary mb-4">
                                     {item.name} {item.age}歳 {item.height}
                                 </p>
 

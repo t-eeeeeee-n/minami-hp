@@ -4,7 +4,7 @@ import React from "react";
 import SectionTitle from "@/components/section/SectionTitle";
 import Image from "next/image";
 
-const ApplyFlow = () => {
+const ApplyFlowSection = () => {
 
     const steps = [
         {
@@ -45,7 +45,7 @@ const ApplyFlow = () => {
     ];
 
     return (
-        <div className="px-6 md:px-0">
+        <div>
             {/* セクションタイトル */}
             <SectionTitle label="Apply Flow">
                 お申し込みの流れ
@@ -58,10 +58,10 @@ const ApplyFlow = () => {
                         <div
                             className={`flex flex-col md:flex-row ${
                                 index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                            } items-center md:p-6 rounded-2xl bg-white border-2 border-primary`}
+                            } md:p-6 rounded-2xl bg-white border-2 border-primary`}
                         >
-                            <div className="md:w-3/4 p-6 rounded-lg">
-                                <h3 className="text-md font-bold text-center mb-6 md:mb-4 border-primary border-b-2">
+                            <div className="md:w-3/4 p-6 pt-8 md:pt-6 rounded-lg">
+                                <h3 className="text-base font-bold text-center mb-8 md:mb-6 border-primary border-b-2">
                                     <span>{step.title}</span>
                                 </h3>
                                 <p className="leading-6 text-xs">{step.description}</p>
@@ -81,7 +81,8 @@ const ApplyFlow = () => {
                         {/* ステップ間の矢印アイコン */}
                         {index < steps.length - 1 && (
                             <div className="flex justify-center my-4">
-                                <span className="material-symbols-outlined text-primary text-3xl">keyboard_arrow_down</span>
+                                <span
+                                    className="material-symbols-outlined text-primary text-3xl">keyboard_arrow_down</span>
                             </div>
                         )}
                     </React.Fragment>
@@ -91,4 +92,4 @@ const ApplyFlow = () => {
     );
 };
 
-export default ApplyFlow;
+export default ApplyFlowSection;

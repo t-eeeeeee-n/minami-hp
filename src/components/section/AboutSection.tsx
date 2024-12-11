@@ -5,12 +5,12 @@ import SectionTitle from "@/components/section/SectionTitle";
 
 const AboutSection = () => {
     return (
-        <div className="px-6 md:px-0">
+        <div>
             <div className="md:text-center mx-auto">
                 <SectionTitle label="About us">
                     <span className="noto-sans">INOUT</span>とは
                 </SectionTitle>
-                <div className="text-sm md:text-md leading-7 md:leading-8">
+                <div className="text-sm md:text-base leading-7 md:leading-8">
                     <p className="mb-2 md:mb-4">
                         パーソナルトレーナーとマンツーマンで
                         <span className="text-as-primary">自分の身体を鍛え</span>、
