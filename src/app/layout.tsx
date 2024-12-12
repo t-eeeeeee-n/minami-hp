@@ -4,6 +4,7 @@ import '@/styles/globalFont.css'
 import { Metadata } from 'next';
 import React from "react";
 import Header from "@/components/Header";
+import Campaign from "@/components/Campaign";
 
 export const metadata: Metadata = {
     title: 'INOUT',
@@ -17,6 +18,7 @@ export default function RootLayout({children,}: { children: React.ReactNode;
             <body>
                 <Header/>
                 {children}
+                <Campaign />
             </body>
         </html>
     );

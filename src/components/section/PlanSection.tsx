@@ -59,27 +59,18 @@ const PlanSection = () => {
 
     const services = [
         {
-            id: 1,
-            icon: "https://minami-hp.s3.ap-northeast-1.amazonaws.com/25078482_m.avif",
-            title: "歯のホワイトニング",
-        },
-        {
-            id: 2,
             icon: "https://minami-hp.s3.ap-northeast-1.amazonaws.com/25078483_m.avif",
             title: "プロテイン",
         },
         {
-            id: 3,
             icon: "https://minami-hp.s3.ap-northeast-1.amazonaws.com/25078484_m.avif",
             title: "ウェア・シューズ\nタオル",
         },
         {
-            id: 4,
             icon: "https://minami-hp.s3.ap-northeast-1.amazonaws.com/25078485_m.avif",
             title: "食事管理",
         },
         {
-            id: 5,
             icon: "https://minami-hp.s3.ap-northeast-1.amazonaws.com/25078486_m.avif",
             title: "ミネラルウォーター",
         },
@@ -133,9 +124,9 @@ const PlanSection = () => {
                     </p>
                 </div>
                 <div className="flex flex-wrap justify-center gap-4 md:gap-6 max-w-6xl mx-auto">
-                    {services.map((service) => (
+                    {services.map((service, index) => (
                         <div
-                            key={service.id}
+                            key={index}
                             className="flex flex-col items-center text-center space-y-4 "
                         >
                             <div className="relative w-12 md:w-20 aspect-square">

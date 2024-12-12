@@ -66,7 +66,7 @@ const ApplyFlowSection = () => {
                                 </h3>
                                 <p className="leading-6 text-xs">{step.description}</p>
                             </div>
-                            <div className="md:w-1/4 px-6 pb-6 md:p-0">
+                            <div className="md:w-1/4 px-6 pb-6 md:p-0 flex justify-center md:items-center">
                                 <Image
                                     src={step.imageSrc}
                                     alt={`Step ${step.id}`}
