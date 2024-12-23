@@ -20,7 +20,7 @@ const PlanSection = () => {
             id: 2,
             title: "月4回プラン",
             totalPrice: "30,800円",
-            pricePerSession: "7700",
+            pricePerSession: "7,700",
             perSessionPrice: "週1回40分×月4回",
             taxPerSessionPrice: "※月額制",
             isRecommended: true,
@@ -52,9 +52,9 @@ const PlanSection = () => {
     ];
 
     const additionalInfo = [
-        "入会金11,000円（税込）。",
-        "時間は60分・90分もございます。",
-        "チケット制プランもご用意しております。",
+        "入会金11,000円（税込）",
+        "時間は60分・90分もございます",
+        "チケット制プランもご用意しております",
     ];
 
     const services = [

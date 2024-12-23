@@ -9,6 +9,7 @@ import ReasonSection from "@/components/section/ReasonSection";
 import ApplyFlowSection from "@/components/section/ApplyFlowSection";
 import FadeIn from "@/components/FadeIn";
 import PlanSection from "@/components/section/PlanSection";
+import TestimonialsSection from "@/components/section/TestimonialsSection";
 
 export default function HomePage() {
     return (
@@ -24,7 +25,7 @@ export default function HomePage() {
                     <AboutSection/>
                 </FadeIn>
             </div>
-            <div className="bg-white py-16 px-6 md:px-28 lg:px-32 xl:px-72">
+            <div id="program" className="bg-white py-16 px-6 md:px-28 lg:px-32 xl:px-72">
                 <FadeIn>
                     <ConcernsSection/>
                 </FadeIn>
@@ -49,6 +50,12 @@ export default function HomePage() {
                     <PlanSection/>
                 </FadeIn>
             </div>
+            <div id="testimonials" className="bg-white py-16 px-6 md:px-28 lg:px-32 xl:px-72">
+                <FadeIn>
+                    <TestimonialsSection/>
+                </FadeIn>
+            </div>
+
             <FadeIn>
                 <StrengthPoints/>
             </FadeIn>

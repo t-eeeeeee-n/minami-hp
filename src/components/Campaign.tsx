@@ -4,17 +4,17 @@ import React from "react";
 
 const StickyFooter = () => {
     return (
-        <div className="fixed bottom-0 left-0 w-full flex justify-center py-4 px-6 md:px-28 lg:px-32 xl:px-72 shadow-lg z-50">
+        <div className="fixed bottom-0 left-0 w-full flex justify-center py-4 px-6 md:px-28 lg:px-32 xl:px-88 shadow-lg z-50">
             <div
-                className="bg-green-500 text-white py-4 px-2 flex items-center justify-center w-full rounded-lg shadow-lg">
+                className="bg-green-500 text-white py-2 px-2 flex items-center justify-center w-full rounded-lg shadow-lg">
                 {/* 左側のテキスト */}
                 <div className="flex items-center mr-5 md:mr-10">
                     <div
-                        className="bg-white text-green-500 font-bold text-lg md:text-2xl rounded-full w-10 md:w-16 h-10 md:h-16 flex items-center justify-center">
+                        className="bg-white text-green-500 font-bold text-lg md:text-xl rounded-full w-10 md:w-12 h-10 md:h-12 flex items-center justify-center">
                         ¥0
                     </div>
                 </div>
-                <div className="flex flex-col items-center mr-5 md:mr-10 text-xs md:text-xl">
+                <div className="flex flex-col items-center mr-5 md:mr-10 text-xs md:text-sm">
                     <div className="font-bold">
                         <p>ウェブ限定キャンペーン</p>
                     </div>

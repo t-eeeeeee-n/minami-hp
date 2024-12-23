@@ -52,7 +52,7 @@ const ConcernsSection = () => {
             </div>
 
             <div className="my-10 md:my-16 max-w-5xl mx-auto md:px-0">
-                <div className="bg-primary shadow-md rounded-lg p-12 md:p-6">
+                <div className="bg-primary shadow-md rounded-lg p-10 md:p-6">
                     <h3 className="text-on-primary text-base md:text-xl font-bold text-center mb-6">こんなお悩みはありませんか？</h3>
                     <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs md:text-base text-center leading-relaxed">
                         {concerns.map((concern, index) => (
