@@ -10,8 +10,8 @@ const PlanSection = () => {
         {
             id: 1,
             title: "月2回プラン",
-            totalPrice: "14,900円",
-            taxPrice: "（税込）",
+            totalPrice: "17,600円",
+            pricePerSession: "8,800",
             perSessionPrice: "隔週1回40分×月2回",
             taxPerSessionPrice: "※月額制",
             isRecommended: false,
@@ -19,8 +19,8 @@ const PlanSection = () => {
         {
             id: 2,
             title: "月4回プラン",
-            totalPrice: "29,800円",
-            taxPrice: "（税込）",
+            totalPrice: "30,800円",
+            pricePerSession: "7700",
             perSessionPrice: "週1回40分×月4回",
             taxPerSessionPrice: "※月額制",
             isRecommended: true,
@@ -28,8 +28,8 @@ const PlanSection = () => {
         {
             id: 3,
             title: "月8回プラン",
-            totalPrice: "59,600円",
-            taxPrice: "（税込）",
+            totalPrice: "52,800円",
+            pricePerSession: "6,600",
             perSessionPrice: "週2回40分×月8回",
             taxPerSessionPrice: "※月額制",
             isRecommended: false,
@@ -98,8 +98,11 @@ const PlanSection = () => {
                             {plan.title}
                         </h3>
                         <div className="text-center mb-4">
-                            <p className="text-2xl font-bold text-as-accent">{plan.totalPrice}</p>
-                            <p className="text-sm text-secondary">{plan.taxPrice}</p>
+                            <p className="text-2xl text-as-accent">
+                                <span className="font-bold">{plan.totalPrice}</span>
+                                <span className="text-xs text-secondary">(税込)</span>
+                            </p>
+                            <p className="text-xs text-secondary">1回当たり{plan.pricePerSession}円</p>
                         </div>
                         <div className="text-center">
                             {plan.perSessionPrice && (

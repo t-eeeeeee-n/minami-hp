@@ -10,24 +10,25 @@ const StickyFooter = () => {
                 {/* 左側のテキスト */}
                 <div className="flex items-center mr-5 md:mr-10">
                     <div
-                        className="bg-white text-green-500 font-bold text-lg rounded-full w-10 h-10 flex items-center justify-center">
+                        className="bg-white text-green-500 font-bold text-lg md:text-2xl rounded-full w-10 md:w-16 h-10 md:h-16 flex items-center justify-center">
                         ¥0
                     </div>
                 </div>
-                <div className="flex flex-col items-center text-sm mr-5 md:mr-10">
-                    <div className="text-base font-bold">
+                <div className="flex flex-col items-center mr-5 md:mr-10 text-xs md:text-xl">
+                    <div className="font-bold">
                         <p>ウェブ限定キャンペーン</p>
                     </div>
-                    <div className="flex mt-1">
-                        <div className="flex flex-col items-center justify-center text-xs">
+                    <div className="mt-1 md:mt-3 flex">
+                        <div className="flex flex-col items-center justify-center">
                             <p>体験通常価格</p>
                             <p>8,800円</p>
                         </div>
                         <div className="flex items-center mx-2">
                             <span className="material-symbols-outlined">keyboard_double_arrow_right</span>
                         </div>
-                        <div className="flex items-center text-sm">
-                            <p className="font-bold">今なら <span className="text-xl">０</span>円 で実施中</p>
+                        <div className="flex flex-col items-center font-bold">
+                            <p>今なら</p>
+                            <p><span>０</span>円 で実施中</p>
                         </div>
                     </div>
                 </div>

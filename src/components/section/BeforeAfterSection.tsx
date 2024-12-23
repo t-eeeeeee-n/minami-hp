@@ -9,10 +9,10 @@ const BeforeAfterSection = () => {
     const data = [
         {
             name: "Y様",
-            age: 26,
-            height: "158cm",
-            beforeImg: "https://minami-hp.s3.ap-northeast-1.amazonaws.com/S__16252982.avif",
-            afterImg: "https://minami-hp.s3.ap-northeast-1.amazonaws.com/S__16252984.avif",
+            age: 40,
+            height: "160cm",
+            beforeImg: "https://minami-hp.s3.ap-northeast-1.amazonaws.com/S__16252982.jpg",
+            afterImg: "https://minami-hp.s3.ap-northeast-1.amazonaws.com/S__16252984.jpg",
             results: [
                 { label: "体重", value: "- 6.3", unit: "kg" },
                 { label: "ウエスト", value: "- 10", unit: "cm" },
@@ -21,7 +21,7 @@ const BeforeAfterSection = () => {
         },
         {
             name: "R様",
-            age: 32,
+            age: 30,
             height: "162.5cm",
             beforeImg: "https://minami-hp.s3.ap-northeast-1.amazonaws.com/S__16252985.avif",
             afterImg: "https://minami-hp.s3.ap-northeast-1.amazonaws.com/S__16252986.avif",
@@ -70,7 +70,7 @@ const BeforeAfterSection = () => {
                                             priority
                                             width={500}
                                             height={500}
-                                            className="w-full h-full object-cover"
+                                            className="h-full object-cover"
                                         />
                                         <span
                                             className="absolute top-2 left-2 bg-white text-as-primary text-xs px-2 py-1 rounded-3xl shadow-md">
@@ -80,7 +80,7 @@ const BeforeAfterSection = () => {
                                 </div>
 
                                 <p className="text-base font-bold text-secondary mb-4">
-                                    {item.name} {item.age}歳 {item.height}
+                                    {item.name} {item.age}代 {item.height}
                                 </p>
 
                                 <div className="flex flex-col items-center space-y-2">

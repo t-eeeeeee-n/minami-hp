@@ -19,28 +19,28 @@ const ApplyFlowSection = () => {
             title: "ご来店",
             description:
                 "ご来店はご予約された5分前目安にご来店ください。\n当ジムにて、ウェア・シューズ・タオル・ミネラルウォーター、各種無料レンタルしておりますので、手ぶらでお越し頂いて大丈夫です。",
-            imageSrc: "https://minami-hp.s3.ap-northeast-1.amazonaws.com/22830622_m.avif",
+            imageSrc: "https://minami-hp.s3.ap-northeast-1.amazonaws.com/22830622_m.jpg",
         },
         {
             id: 3,
             title: "カウンセリング",
             description:
                 "過去の運動経験や生活習慣、食事内容などについてヒアリングさせていただきます。\n\nそれらをもとに、痩せたい、体調不良を改善したいといった具体的なお力添えの悩みに対してお話しさせていただく流れを取っています。\n\n1. カウンセリング 過去の運動経験や、生活リズム、食事などお客様の今についてお伺いします。\n2. 目標設定 お客様がなりたいカラダをお聞きし、目標を定めます。\n3. プログラムご提案 目標や身体機能に沿って最適なプログラムをご提案します。",
-            imageSrc: "https://minami-hp.s3.ap-northeast-1.amazonaws.com/3868812_m.avif",
+            imageSrc: "https://minami-hp.s3.ap-northeast-1.amazonaws.com/3868812_m.jpg",
         },
         {
             id: 4,
             title: "トレーニング",
             description:
                 "カウンセリングさせて頂いた内容を元に、最適なトレーニングメニューを実施させて頂きます。",
-            imageSrc: "https://minami-hp.s3.ap-northeast-1.amazonaws.com/24078484_m.avif",
+            imageSrc: "https://minami-hp.s3.ap-northeast-1.amazonaws.com/24078484_m.jpg",
         },
         {
             id: 5,
             title: "アフターカウンセリング",
             description:
                 "トレーニングを終えた後は、ご質問や今後のプラン等詳しくお話しさせて頂きます。\nトレーニング後はプロテインの補給も可能です。",
-            imageSrc: "https://minami-hp.s3.ap-northeast-1.amazonaws.com/24078482_m.avif",
+            imageSrc: "https://minami-hp.s3.ap-northeast-1.amazonaws.com/24078482_m.jpg",
         },
     ];
 
