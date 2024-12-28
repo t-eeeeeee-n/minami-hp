@@ -11,7 +11,7 @@ const TrialFlowSection = () => {
 
                 {/* Steps */}
                 <div className="max-w-md w-full md:px-0 mx-auto">
-                    <div className="text-left text-sm md:text-base space-y-4 mb-6">
+                    <div className="text-left text-sm md:text-base space-y-4">
                         <p>
                             ① <a href="#" className="text-as-primary font-bold">[公式LINE]</a> で予約
                         </p>
@@ -25,14 +25,14 @@ const TrialFlowSection = () => {
                         <p>⑤ 予約完了！</p>
                         <p>次回からLINEで直接予約が取れる簡単なシステムです。</p>
                     </div>
-
-                    <div className="mt-12 text-center">
-                        <button
-                            className="px-8 py-3 bg-accent text-on-accent rounded-3xl shadow hover:bg-secondary-dark transition">
-                            ご予約はこちら
-                        </button>
-                    </div>
                 </div>
+            </div>
+
+            <div className="mt-12 text-center">
+                <button
+                    className="px-8 py-3 bg-accent text-on-accent rounded-3xl shadow hover:bg-secondary-dark transition">
+                    ご予約はこちら
+                </button>
             </div>
         </div>
 
