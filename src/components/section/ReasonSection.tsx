@@ -28,7 +28,7 @@ const reasons = [
 
 const ReasonSection = () => {
     return (
-        <div>
+        <div className="max-w-4xl mx-auto">
             <SectionTitle label="Reason">
                 <span className="noto-sans">INOUT</span>が選ばれる<br/>
                 <span className="text-primary text-xl font-bold"><span className="text-as-primary text-3xl">4</span>つの理由</span>

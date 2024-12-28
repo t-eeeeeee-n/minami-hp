@@ -36,18 +36,20 @@ const ConcernsSection = () => {
     ];
 
     return (
-        <div>
+        <div className="max-w-4xl mx-auto">
             <div
                 className="relative bg-cover bg-center h-[300px] md:h-[400px]"
-                style={{ backgroundImage: "url('https://minami-hp.s3.ap-northeast-1.amazonaws.com/consultation.avif')" }}
+                style={{backgroundImage: "url('https://minami-hp.s3.ap-northeast-1.amazonaws.com/consultation.avif')"}}
             >
-                <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-center text-white px-6">
-                    <h2 className="text-2xl md:text-3xl font-bold mb-4"><span className="noto-sans">INOUT</span>だから叶うボディメイク</h2>
+                <div
+                    className="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-center text-white px-6">
+                    <h2 className="text-2xl md:text-3xl font-bold mb-4"><span className="noto-sans">INOUT</span>だから叶うボディメイク
+                    </h2>
                     <p className="text-base md:text-lg">
-                        <span className="noto-sans">INOUT</span>には痩せたいといった方から<br />
+                        <span className="noto-sans">INOUT</span>には痩せたいといった方から<br/>
                         このようなお悩み・ご相談をいただきます。
                     </p>
-                    <hr className="border-t border-white w-12 mt-4" />
+                    <hr className="border-t border-white w-12 mt-4"/>
                 </div>
             </div>
 

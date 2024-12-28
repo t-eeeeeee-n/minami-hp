@@ -34,7 +34,7 @@ const BeforeAfterSection = () => {
     ];
 
     return (
-        <div>
+        <div className="max-w-4xl mx-auto">
             <div className="text-center max-w-5xl mx-auto">
                 <SectionTitle label="Before・After">ビフォー・アフター</SectionTitle>
                 <div className="container mx-auto">

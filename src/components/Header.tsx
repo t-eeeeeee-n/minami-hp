@@ -24,7 +24,7 @@ const Header = () => {
                     priority
                     width={25}
                     height={25}
-                    className="mr-2"
+                    className="mr-2 w-auto"
                 />
                 <span className="noto-sans text-sm">INOUT</span>
             </div>

@@ -1,16 +1,39 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 
-const StickyFooter = () => {
+const Campaign = () => {
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 0) {
+                setIsVisible(true);
+            } else {
+                setIsVisible(false);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
     return (
-        <div className="fixed bottom-0 left-0 w-full flex justify-center py-4 px-6 md:px-28 lg:px-32 xl:px-88 shadow-lg z-50">
+        <div
+            className={`fixed bottom-0 left-1/2 transform -translate-x-1/2 w-full max-w-4xl flex justify-center py-4 px-6 md:py-4 md:px-0 z-50 transition-transform duration-300 ${
+                isVisible ? "translate-y-0" : "translate-y-full"
+            }`}
+        >
             <div
-                className="bg-green-500 text-white py-2 px-2 flex items-center justify-center w-full rounded-lg shadow-lg">
+                className="bg-green-500 text-white py-2 px-2 flex items-center justify-center w-full rounded-lg shadow-lg"
+            >
                 {/* 左側のテキスト */}
                 <div className="flex items-center mr-5 md:mr-10">
                     <div
-                        className="bg-white text-green-500 font-bold text-lg md:text-xl rounded-full w-10 md:w-12 h-10 md:h-12 flex items-center justify-center">
+                        className="bg-[#ffffff] text-green-500 font-bold text-lg md:text-xl rounded-full w-10 md:w-12 h-10 md:h-12 flex items-center justify-center"
+                    >
                         ¥0
                     </div>
                 </div>
@@ -40,4 +63,4 @@ const StickyFooter = () => {
     );
 };
 
-export default StickyFooter;
+export default Campaign;

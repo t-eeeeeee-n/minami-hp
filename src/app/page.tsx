@@ -10,49 +10,61 @@ import ApplyFlowSection from "@/components/section/ApplyFlowSection";
 import FadeIn from "@/components/FadeIn";
 import PlanSection from "@/components/section/PlanSection";
 import TestimonialsSection from "@/components/section/TestimonialsSection";
+import ProfileSection from "@/components/section/ProfileSection";
+import TrialFlowSection from "@/components/section/TrialFlowSection";
 
 export default function HomePage() {
     return (
         <div className="min-h-screen">
-            <div id="home" className="pb-12 md:px-28 lg:px-32 xl:px-72">
+            <div id="home" className="md:px-0">
                 <HeroSection/>
             </div>
             <div className="bg-white py-12">
                 <ScrollBox/>
             </div>
-            <div id="about-us" className="py-16 px-6 md:px-28 lg:px-32 xl:px-72">
+            <div id="about-us" className="py-16 px-6 md:px-0">
                 <FadeIn>
                     <AboutSection/>
                 </FadeIn>
             </div>
-            <div id="program" className="bg-white py-16 px-6 md:px-28 lg:px-32 xl:px-72">
+            <div id="program" className="bg-white py-16 px-6 md:px-0">
                 <FadeIn>
                     <ConcernsSection/>
                 </FadeIn>
             </div>
-            <div id="before-after" className="py-16 px-6 md:px-28 lg:px-32 xl:px-72">
+            <div id="before-after" className="py-16 px-6 md:px-0">
                 <FadeIn>
                     <BeforeAfterSection/>
                 </FadeIn>
             </div>
-            <div id="reason" className="bg-white py-16 md:px-28 lg:px-32 xl:px-72">
+            <div id="reason" className="bg-white py-16 md:px-0">
                 <FadeIn>
                     <ReasonSection/>
                 </FadeIn>
             </div>
-            <div id="apply-flow" className="py-16 px-6 md:px-28 lg:px-32 xl:px-72">
+            <div id="apply-flow" className="py-16 px-6 md:px-0">
                 <FadeIn>
                     <ApplyFlowSection/>
                 </FadeIn>
             </div>
-            <div id="plan" className="bg-white py-16 px-6 md:px-28 lg:px-32 xl:px-72">
+            <div id="plan" className="bg-white py-16 px-6 md:px-0">
                 <FadeIn>
                     <PlanSection/>
                 </FadeIn>
             </div>
-            <div id="testimonials" className="bg-white py-16 px-6 md:px-28 lg:px-32 xl:px-72">
+            <div id="testimonials" className="py-16 px-6 md:px-0">
                 <FadeIn>
                     <TestimonialsSection/>
+                </FadeIn>
+            </div>
+            <div id="profile" className="bg-white py-16 px-6 md:px-0">
+                <FadeIn>
+                    <ProfileSection/>
+                </FadeIn>
+            </div>
+            <div id="trial-flow" className="py-16 px-6 md:px-0">
+                <FadeIn>
+                    <TrialFlowSection/>
                 </FadeIn>
             </div>
 

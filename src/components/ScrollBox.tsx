@@ -8,7 +8,7 @@ const items = [
     { id: "about-us", icon: "person", text: "INOUTとは" },
     { id: "program", icon: "edit", text: "プログラム" },
     { id: "reason", icon: "flag_2", text: "選ばれる理由" },
-    { id: "flow", icon: "play_circle", text: "お申し込みの流れ" },
+    { id: "apply-flow", icon: "play_circle", text: "お申し込みの流れ" },
     { id: "plan", icon: "currency_yen", text: "料金プラン" },
     { id: "testimonials", icon: "chat", text: "お客様の声" },
 ];

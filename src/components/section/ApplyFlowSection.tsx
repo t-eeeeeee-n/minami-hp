@@ -45,7 +45,7 @@ const ApplyFlowSection = () => {
     ];
 
     return (
-        <div>
+        <div className="max-w-4xl mx-auto">
             {/* セクションタイトル */}
             <SectionTitle label="Apply Flow">
                 お申し込みの流れ
@@ -73,7 +73,7 @@ const ApplyFlowSection = () => {
                                     priority
                                     width={500}
                                     height={500}
-                                    className="object-cover md:rounded-none"
+                                    className="w-auto object-cover md:rounded-none"
                                 />
                             </div>
                         </div>

@@ -77,7 +77,7 @@ const PlanSection = () => {
     ];
 
     return (
-        <div>
+        <div className="max-w-4xl mx-auto">
             <SectionTitle label="Plan">料金プラン</SectionTitle>
             {/* Pricing Cards */}
             <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
@@ -182,7 +182,7 @@ const PlanSection = () => {
             <div className="mt-12 text-center">
                 <button
                     className="px-8 py-3 bg-accent text-on-accent rounded-3xl shadow hover:bg-secondary-dark transition">
-                    ご料金の確認はこちらから
+                    ご料金の確認はこちら
                 </button>
             </div>
         </div>
