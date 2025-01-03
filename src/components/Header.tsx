@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Hamburger from "@/components/Hamburger";
 import {handleScroll} from "@/utils/globalActions";
+import Link from "next/link";
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -15,18 +16,20 @@ const Header = () => {
     return (
         <header className="bg-root text-primary flex items-center px-6 py-4 sticky top-0 z-50 shadow-md">
             <div
-                className="absolute left-1/2 transform -translate-x-1/2 flex items-center cursor-pointer"
+                className="absolute left-1/2 transform -translate-x-1/2 cursor-pointer"
                 onClick={() => handleScroll("home")}
             >
-                <Image
-                    src="https://minami-hp.s3.ap-northeast-1.amazonaws.com/S__389940471.jpg"
-                    alt="Logo"
-                    priority
-                    width={25}
-                    height={25}
-                    className="mr-2 w-auto"
-                />
-                <span className="noto-sans text-sm">INOUT</span>
+                <Link href="/" className="flex items-center">
+                    <Image
+                        src="https://minami-hp.s3.ap-northeast-1.amazonaws.com/S__389940471.jpg"
+                        alt="Logo"
+                        priority
+                        width={25}
+                        height={25}
+                        className="mr-2 w-auto"
+                    />
+                    <span className="noto-sans text-sm">INOUT</span>
+                </Link>
             </div>
             <div className="ml-auto flex items-center">
                 {/* ハンバーガーボタン */}

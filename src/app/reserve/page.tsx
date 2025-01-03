@@ -18,7 +18,16 @@ const Page = () => {
                 <div className="relative">
                     <h1 className="text-3xl md:text-4xl font-bold">体験予約はこちら</h1>
                     <p className="mt-4 text-sm md:text-base">
-                        LINEをご利用の方は、[公式LINE] からもスムーズにお問い合わせ・ご予約いただけます。
+                        LINEをご利用の方は、
+                        <a
+                            href="https://line.me/R/ti/p/@243otxyn"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="underline text-green-500"
+                        >
+                            [公式LINE]
+                        </a>
+                        からもスムーズにお問い合わせ・ご予約いただけます。
                     </p>
                 </div>
             </div>
@@ -28,7 +37,7 @@ const Page = () => {
                 <form className="space-y-8">
                     {/* Name Section */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div>
+                    <div>
                             <label className="block text-sm font-medium">
                                 お名前
                             </label>

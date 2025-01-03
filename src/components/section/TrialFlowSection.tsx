@@ -30,8 +30,8 @@ const TrialFlowSection = () => {
 
             <div className="mt-12 text-center">
                 <a
-                    href="https://line.me/R/ti/p/@243otxyn"
-                    target="_blank"
+                    href="/reserve"
+                    // target="_blank"
                     rel="noopener noreferrer"
                     className="px-8 py-3 bg-accent text-on-accent rounded-3xl shadow hover:bg-secondary-dark transition inline-block"
                 >
