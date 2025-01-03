@@ -179,12 +179,12 @@ const PlanSection = () => {
             </div>
 
             {/* Call to Action */}
-            <div className="mt-12 text-center">
-                <button
-                    className="px-8 py-3 bg-accent text-on-accent rounded-3xl shadow hover:bg-secondary-dark transition">
-                    ご料金の確認はこちら
-                </button>
-            </div>
+            {/*<div className="mt-12 text-center">*/}
+            {/*    <button*/}
+            {/*        className="px-8 py-3 bg-accent text-on-accent rounded-3xl shadow hover:bg-secondary-dark transition">*/}
+            {/*        ご料金の確認はこちら*/}
+            {/*    </button>*/}
+            {/*</div>*/}
         </div>
     )
 }

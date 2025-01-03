@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import SectionTitle from "@/components/section/SectionTitle";
+import Link from "next/link";
 
 const reasons = [
     {
@@ -70,10 +71,12 @@ const ReasonSection = () => {
             </div>
 
             <div className="text-center">
-                <button
-                    className="px-8 py-3 bg-accent text-on-accent rounded-3xl shadow hover:bg-secondary-dark transition">
-                    詳しくはこちら
-                </button>
+                <Link href="/method" passHref>
+                    <button
+                        className="px-8 py-3 bg-accent text-on-accent rounded-3xl shadow hover:bg-secondary-dark transition">
+                        詳しくはこちら
+                    </button>
+                </Link>
             </div>
         </div>
     );

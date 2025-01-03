@@ -16,8 +16,8 @@ const ProfileSection = () => {
         imageSrc:
             "https://minami-hp.s3.ap-northeast-1.amazonaws.com/profile_1662367589441.avif",
         socialLinks: {
-            instagram: "https://www.instagram.com",
-            line: "https://line.me",
+            instagram: "https://www.instagram.com/__inoutgym__/?hl=ja",
+            line: "https://line.me/R/ti/p/@243otxyn",
         },
     };
 
