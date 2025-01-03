@@ -11,10 +11,13 @@ import TestimonialsSection from "@/components/section/TestimonialsSection";
 import ProfileSection from "@/components/section/ProfileSection";
 import TrialFlowSection from "@/components/section/TrialFlowSection";
 import AccessSection from "@/components/section/AccessSection";
+import Campaign from "@/components/Campaign";
+import React from "react";
 
 export default function HomePage() {
     return (
         <div className="min-h-screen">
+            <Campaign />
             <div id="home" className="md:px-0">
                 <HeroSection/>
             </div>

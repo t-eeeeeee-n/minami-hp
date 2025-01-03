@@ -19,7 +19,6 @@ export default function RootLayout({children,}: { children: React.ReactNode;
             <body>
                 <Header/>
                 {children}
-                <Campaign />
                 <Footer/>
             </body>
         </html>

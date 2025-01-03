@@ -8,7 +8,7 @@ import {menuItems} from "@/constants/constants";
 
 const Footer = () => {
     return (
-        <footer className="pt-10 pb-32 px-6 lg:px-0">
+        <footer className="py-32 px-6 lg:px-0">
             <div className="max-w-4xl mx-auto">
                 <div className="grid md:grid-cols-4 gap-8 items-start">
                     {/* 左側: ロゴとソーシャルアイコン */}

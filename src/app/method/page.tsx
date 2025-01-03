@@ -43,17 +43,21 @@ const Page = () => {
         <div className="bg-white">
             {/* Hero Section */}
             <div
-                className="relative text-white py-24 px-6 text-center bg-cover bg-center"
+                className="relative text-white py-32 px-6 text-center bg-cover bg-center"
                 style={{
                     backgroundImage: "url('https://minami-hp.s3.ap-northeast-1.amazonaws.com/9802a6_99acba2fe810436d992736c0e146e013.avif')",
                 }}
             >
-                <div className="flex flex-col gap-2 items-center justify-center">
+                {/* オーバーレイ */}
+                <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+
+                {/* コンテンツ */}
+                <div className="relative flex flex-col gap-2 items-center justify-center">
                     {/* 左側のタイトル */}
-                    <h1 className="text-2xl font-bold bg-black bg-opacity-50 inline-block px-4 py-2">INOUTメソッド</h1>
+                    <h1 className="text-2xl font-bold inline-block">INOUTメソッド</h1>
 
                     {/* 右側のサブタイトル */}
-                    <p className="text-sm md:text-base bg-black bg-opacity-50 inline-block px-4 py-2">
+                    <p className="text-sm md:text-base inline-block">
                         美と健康にこだわり尽く、4つのアプローチ
                     </p>
                 </div>
