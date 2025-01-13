@@ -83,6 +83,21 @@ const Page = () => {
                         </div>
                     </div>
 
+                    {/* Contact Section */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label className="block text-sm font-medium ">
+                                希望店舗
+                            </label>
+                            <select
+                                className="mt-1 block w-full rounded-md shadow-sm focus:border-primary focus:ring-primary sm:text-sm"
+                            >
+                                <option value="10:00">新富店</option>
+                                <option value="10:30">目黒店</option>
+                            </select>
+                        </div>
+                    </div>
+
                     {/* Preferred Date Section */}
                     {[1, 2, 3].map((index) => (
                         <div key={index} className="grid grid-cols-1 md:grid-cols-2 gap-4">
