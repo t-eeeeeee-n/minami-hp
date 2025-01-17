@@ -32,36 +32,36 @@
   --text-as-accent: #E85E36;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #121212;
-    /*--background: #1A1A1A;*/
-    --foreground: #F2FBFD;
+/*@media (prefers-color-scheme: dark) {*/
+/*  :root {*/
+/*    --background: #121212;*/
+/*    !*--background: #1A1A1A;*!*/
+/*    --foreground: #F2FBFD;*/
 
-    /* 背景色 */
-    --primary: #2D93C5;
-    --primary-hover: #3CA6D8;
-    --secondary: #4652A4;
-    --secondary-hover: #5A6BBA;
-    --accent: #E85E36;
-    --accent-hover: #FF5E3D;
-    --white: #000000;
+/*    !* 背景色 *!*/
+/*    --primary: #2D93C5;*/
+/*    --primary-hover: #3CA6D8;*/
+/*    --secondary: #4652A4;*/
+/*    --secondary-hover: #5A6BBA;*/
+/*    --accent: #E85E36;*/
+/*    --accent-hover: #FF5E3D;*/
+/*    --white: #000000;*/
 
-    /* テキスト色 */
-    --text-primary: #FFFFFF;
-    --text-secondary: #B0B0B0;
+/*    !* テキスト色 *!*/
+/*    --text-primary: #FFFFFF;*/
+/*    --text-secondary: #B0B0B0;*/
 
-    /* 背景色に対する文字色 */
-    --text-on-primary: #FFFFFF;
-    --text-on-secondary: #FFFFFF;
-    --text-on-accent: #FFFFFF;
+/*    !* 背景色に対する文字色 *!*/
+/*    --text-on-primary: #FFFFFF;*/
+/*    --text-on-secondary: #FFFFFF;*/
+/*    --text-on-accent: #FFFFFF;*/
 
-    /* アクセントとしての文字色 */
-    --text-as-primary: #2D93C5;
-    --text-as-secondary: #4652A4;
-    --text-as-accent: #E85E36;
-  }
-}
+/*    !* アクセントとしての文字色 *!*/
+/*    --text-as-primary: #2D93C5;*/
+/*    --text-as-secondary: #4652A4;*/
+/*    --text-as-accent: #E85E36;*/
+/*  }*/
+/*}*/
 
 body {
   color: var(--foreground);
@@ -169,6 +169,14 @@ body {
     transform: translateY(7px);
   }
 }
+@keyframes slideVerticalSmall {
+  0%, 100% {
+    transform: translateY(-3px);
+  }
+  50% {
+    transform: translateY(3px);
+  }
+}
 
 @keyframes slideBorder {
   0% {
@@ -196,6 +204,9 @@ body {
   }
   .animate-slide-vertical {
     animation: slideVertical 1s infinite;
+  }
+  .animate-slide-vertical-sm {
+    animation: slideVerticalSmall 1s infinite ease-in-out;
   }
   .animate-slide-border {
     animation: slideBorder 1s ease-in-out forwards;

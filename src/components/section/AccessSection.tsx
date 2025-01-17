@@ -8,7 +8,10 @@ const AccessSection = () => {
         {
             title: "住所",
             subTitle: "Address",
-            content: "東京都中央区新富1-17-6 正金アパートメント入船204",
+            content: [
+                { store: "新富店", address: "東京都中央区新富1-17-6 正金アパートメント入船 204" },
+                { store: "目黒店", address: "東京都品川区上大崎1-5-63 エクセレント白金台 201" },
+            ],
             isLink: false,
         },
         {
@@ -27,16 +30,6 @@ const AccessSection = () => {
         },
     ];
 
-    // const openingHours = [
-    //     { day: "月曜日", hours: "10:00~22:00" },
-    //     { day: "火曜日", hours: "10:00~23:00" },
-    //     { day: "水曜日", hours: "10:00~22:00" },
-    //     { day: "木曜日", hours: "09:00~22:00" },
-    //     { day: "金曜日", hours: "09:00~22:00" },
-    //     { day: "土曜日", hours: "09:00~21:00" },
-    //     { day: "日曜日", hours: "09:00~20:00" },
-    // ];
-
     return (
         <div className="max-w-4xl mx-auto">
             <SectionTitle label="Access">アクセス</SectionTitle>
@@ -53,7 +46,16 @@ const AccessSection = () => {
                                     {info.subTitle}
                                 </span>
                             </div>
-                            {info.isLink ? (
+                            {Array.isArray(info.content) ? (
+                                <ul className="space-y-4">
+                                    {info.content.map((location, idx) => (
+                                        <li key={idx}>
+                                            <p className="text-sm mb-1">{location.store}</p>
+                                            <p className="whitespace-pre-line text-base">{location.address}</p>
+                                        </li>
+                                    ))}
+                                </ul>
+                            ) : info.isLink ? (
                                 <a
                                     href={`${info.linkPrefix}${info.content}`}
                                     className="text-primary text-base underline"
@@ -65,32 +67,12 @@ const AccessSection = () => {
                             )}
                         </div>
                     ))}
-
-                    {/* 営業時間 */}
-                    {/*<div>*/}
-                    {/*    <div className="flex items-center justify-between border-b pb-2 mb-4">*/}
-                    {/*        <h3 className="text-lg font-bold text-gray-800">営業時間</h3>*/}
-                    {/*        <span className="text-xs text-gray-500 uppercase tracking-widest">*/}
-                    {/*            Opening Hours*/}
-                    {/*        </span>*/}
-                    {/*    </div>*/}
-                    {/*    <table className="w-full text-left text-sm border-collapse">*/}
-                    {/*        <tbody>*/}
-                    {/*        {openingHours.map((entry, index) => (*/}
-                    {/*            <tr key={index} className="border-b">*/}
-                    {/*                <td className="py-2 font-medium">{entry.day}</td>*/}
-                    {/*                <td className="py-2">{entry.hours}</td>*/}
-                    {/*            </tr>*/}
-                    {/*        ))}*/}
-                    {/*        </tbody>*/}
-                    {/*    </table>*/}
-                    {/*</div>*/}
                 </div>
 
                 {/* Google Map */}
                 <div className="w-full rounded-lg shadow-lg overflow-hidden">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.4575088888283!2d139.77053701528296!3d35.671211480197225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bf4df93577f%3A0xb8b9cf98e6f840b7!2sINOUT!5e0!3m2!1sen!2sjp!4v1695365678901!5m2!1sen!2sjp"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.2152753292503!2d139.77283697659104!3d35.671700930495945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018896721d00fad%3A0x64beca37283b31e7!2z44OR44O844K944OK44Or44K444OgSU5PVVQg6YqA5bqn44O75paw5a-M5bqX!5e0!3m2!1sja!2sjp!4v1737135502420!5m2!1sja!2sjp"
                         style={{border: 0}}
                         allowFullScreen={true}
                         loading="lazy"

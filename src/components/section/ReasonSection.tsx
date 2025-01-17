@@ -17,8 +17,8 @@ const reasons = [
     },
     {
         id: 3,
-        title: "最新休息マシン\nによる超回復",
-        imgSrc: "https://minami-hp.s3.ap-northeast-1.amazonaws.com/S__15990810.avif",
+        title: "美容・医療のご紹介",
+        imgSrc: "https://minami-hp.s3.ap-northeast-1.amazonaws.com/S__39600168.jpg",
     },
     {
         id: 4,

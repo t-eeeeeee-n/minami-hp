@@ -1,4 +1,5 @@
-import React from "react";
+"use client"
+
 import { FaInstagram, FaLine } from "react-icons/fa";
 import Image from "next/image";
 import SectionTitle from "@/components/section/SectionTitle";
@@ -24,7 +25,7 @@ const ProfileSection = () => {
     return (
         <div className="max-w-xl mx-auto">
             <SectionTitle label="Trainer profile">トレーナー紹介</SectionTitle>
-            <div className="p-6 rounded-lg shadow max-w-2xl mx-auto">
+            <div className="p-6 bg-white rounded-lg shadow max-w-2xl mx-auto">
                 {/* Profile Image */}
                 <div className="flex justify-center mb-6">
                     <Image
@@ -82,7 +83,7 @@ const ProfileSection = () => {
 
                     {/* Message */}
                     <div className="text-left">
-                        <h3 className="text-base font-bold bg-black text-white dark:text-black inline-block px-3 py-1 rounded-md mb-2">
+                        <h3 className="text-base font-bold bg-black text-white inline-block px-3 py-1 rounded-md mb-2">
                             メッセージ
                         </h3>
                         <p className="text-sm text-primary whitespace-pre-line">{profile.message}</p>

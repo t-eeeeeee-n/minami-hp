@@ -7,13 +7,23 @@ const TrialFlowSection = () => {
     return (
         <div className="max-w-4xl mx-auto">
             <SectionTitle label="Trial flow">体験のお申込み</SectionTitle>
-            <div className="bg-white p-3 md:p-10 rounded-lg text-center">
+            <div className="bg-white rounded-lg text-center">
 
                 {/* Steps */}
                 <div className="max-w-md w-full md:px-0 mx-auto">
                     <div className="text-left text-sm md:text-base space-y-4">
                         <p>
-                            ① <a href="#" className="text-as-primary font-bold">[公式LINE]</a> で予約
+                            ①
+                            <a
+                                href="https://line.me/R/ti/p/@243otxyn"
+                                className="text-green-500 font-bold"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Line"
+                            >
+                                [公式LINE]
+                            </a>
+                            で予約
                         </p>
                         <p>② 友達追加後にINOUTからメッセージが送られます。</p>
                         <p>③ メッセージに希望日を入力して送信してください。</p>

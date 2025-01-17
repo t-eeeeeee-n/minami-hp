@@ -30,7 +30,7 @@ const Campaign = () => {
 
             <Link href="/reserve" className="w-full">
                 <div
-                    className="bg-green-500 text-white py-2 px-2 flex items-center justify-center w-full rounded-lg shadow-lg"
+                    className="bg-green-500 text-white py-2 px-2 flex items-center justify-center w-full rounded-lg shadow-lg animate-slide-vertical-sm"
                 >
                     {/* 左側のテキスト */}
                     <div className="flex items-center mr-5 md:mr-10">

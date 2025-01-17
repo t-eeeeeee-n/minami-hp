@@ -37,7 +37,7 @@ const Page = () => {
                 <form className="space-y-8">
                     {/* Name Section */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
+                        <div>
                             <label className="block text-sm font-medium">
                                 お名前
                             </label>
@@ -56,6 +56,25 @@ const Page = () => {
                                 className="mt-1 block w-full rounded-md shadow-sm focus:border-primary focus:ring-primary sm:text-sm"
                                 placeholder="例: ヤマダ タロウ"
                             />
+                        </div>
+                    </div>
+
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label className="block text-sm font-medium">
+                                年齢
+                            </label>
+                            <select
+                                className="mt-1 block w-full rounded-md shadow-sm focus:border-primary focus:ring-primary sm:text-sm"
+                            >
+                                <option value="">選択してください</option>
+                                {Array.from({ length: 83 }, (_, i) => i + 18).map((age) => (
+                                    <option key={age} value={age}>
+                                        {age}歳
+                                    </option>
+                                ))}
+                            </select>
                         </div>
                     </div>
 
@@ -83,7 +102,6 @@ const Page = () => {
                         </div>
                     </div>
 
-                    {/* Contact Section */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
                             <label className="block text-sm font-medium ">

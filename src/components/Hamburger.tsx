@@ -2,6 +2,7 @@ import Image from "next/image";
 import {FC} from "react";
 import {handleScroll} from "@/utils/globalActions";
 import {menuItems} from "@/constants/constants";
+import {useRouter, usePathname} from "next/navigation";
 
 export type HamburgerProps = {
     isOpen: boolean;
@@ -9,6 +10,10 @@ export type HamburgerProps = {
 }
 
 const Hamburger: FC<HamburgerProps> = ({isOpen, toggleMenu}) => {
+
+    const pathname = usePathname();
+    const router = useRouter();
+
     return (
         <div
             className={`fixed inset-0 z-50 transition-transform duration-300  ${
@@ -45,19 +50,31 @@ const Hamburger: FC<HamburgerProps> = ({isOpen, toggleMenu}) => {
                 </div>
                 <nav className="w-full">
                     <ul className="space-y-4">
-                        {menuItems.map((item, index) => (
+                        {pathname === "/" ? (
+                            menuItems.map((item, index) => (
+                                <li
+                                    key={index}
+                                    className="flex justify-between items-center border-b border-gray-300 pb-2 cursor-pointer"
+                                    onClick={() => {
+                                        handleScroll(item.id);
+                                        toggleMenu();
+                                    }}
+                                >
+                                    <span className="noto-sans text-sm text-as-primary uppercase">{item.en}</span>
+                                    <span className="text-base font-medium text-primary">{item.jp}</span>
+                                </li>
+                            ))
+                        ) : (
                             <li
-                                key={index}
-                                className="flex justify-between items-center border-b border-gray-300 pb-2 cursor-pointer"
+                                className="flex justify-center items-center border-b border-gray-300 pb-2 cursor-pointer"
                                 onClick={() => {
-                                    handleScroll(item.id)
-                                    toggleMenu()
+                                    router.push("/");
+                                    toggleMenu();
                                 }}
                             >
-                                <span className="noto-sans text-sm text-as-primary uppercase">{item.en}</span>
-                                <span className="text-base font-medium text-primary">{item.jp}</span>
+                                <span className="noto-sans text-sm text-primary">ホームに戻る</span>
                             </li>
-                        ))}
+                        )}
                     </ul>
                 </nav>
             </div>

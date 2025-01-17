@@ -6,7 +6,7 @@ import {handleScroll} from "@/utils/globalActions";
 // アイテムデータ
 const items = [
     { id: "about-us", icon: "person", text: "INOUTとは" },
-    { id: "program", icon: "edit", text: "プログラム" },
+    { id: "features", icon: "edit", text: "INOUTの特徴" },
     { id: "reason", icon: "flag_2", text: "選ばれる理由" },
     { id: "apply-flow", icon: "play_circle", text: "お申し込みの流れ" },
     { id: "plan", icon: "currency_yen", text: "料金プラン" },
@@ -19,7 +19,7 @@ const ScrollBox = () => {
             {items.map((item) => (
                 <div
                     key={item.id}
-                    className="relative w-28 h-28 md:w-40 md:h-40 flex flex-col items-center justify-center border border-primary px-2 md:p-4 hover:opacity-65 transition-shadow duration-300 cursor-pointer"
+                    className="bg-white relative w-28 h-28 md:w-40 md:h-40 flex flex-col items-center justify-center border border-primary px-2 md:p-4 hover:opacity-65 transition-shadow duration-300 cursor-pointer"
                     style={{
                         outline: "1px solid var(--primary)",
                     }}

@@ -19,6 +19,7 @@ const Footer = () => {
                                 alt="INOUT Logo"
                                 width={60}
                                 height={60}
+                                priority
                                 className="w-auto h-auto"
                             />
                             <h2 className="noto-sans text-2xl font-bold">INOUT</h2>
