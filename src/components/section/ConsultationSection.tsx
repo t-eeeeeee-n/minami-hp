@@ -43,11 +43,11 @@ const ConcernsSection = () => {
             >
                 <div
                     className="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-center text-white px-6">
-                    <h2 className="text-2xl md:text-3xl font-bold mb-4"><span className="noto-sans">INOUT</span>だから叶うボディメイク
+                    <h2 className="text-2xl md:text-3xl font-bold mb-4"><span className="noto-sans">INOUT</span>で叶う理想の身体
                     </h2>
                     <p className="text-base md:text-lg">
-                        <span className="noto-sans">INOUT</span>には痩せたいといった方から<br/>
-                        このようなお悩み・ご相談をいただきます。
+                        <span className="noto-sans">INOUT</span>にはダイエットやボディメイク、<br/>
+                        様々なお悩みにお応えしております
                     </p>
                     <hr className="border-t border-white w-12 mt-4"/>
                 </div>

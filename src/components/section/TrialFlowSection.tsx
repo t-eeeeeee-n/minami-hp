@@ -7,7 +7,7 @@ const TrialFlowSection = () => {
     return (
         <div className="max-w-4xl mx-auto">
             <SectionTitle label="Trial flow">体験のお申込み</SectionTitle>
-            <div className="bg-white py-10 rounded-lg text-center">
+            <div className="bg-white py-6 md:py-10 px-4 md:px-0 rounded-lg text-center">
 
                 {/* Steps */}
                 <div className="max-w-md w-full md:px-0 mx-auto">
