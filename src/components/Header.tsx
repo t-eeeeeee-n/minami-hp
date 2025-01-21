@@ -17,7 +17,6 @@ const Header = () => {
         <header className="bg-root text-primary flex items-center px-6 py-4 sticky top-0 z-50 shadow-md">
             <div
                 className="absolute left-1/2 transform -translate-x-1/2 cursor-pointer"
-                onClick={() => handleScroll("home")}
             >
                 <Link href="/" className="flex items-center">
                     <Image

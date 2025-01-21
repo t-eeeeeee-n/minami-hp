@@ -3,10 +3,12 @@
 import React from "react";
 import { FaInstagram, FaLine } from "react-icons/fa";
 import Image from "next/image";
-import {handleScroll} from "@/utils/globalActions";
-import {menuItems} from "@/constants/constants";
+import { useNavigateAndScroll } from "@/utils/useNavigateAndScroll";
+import {menuItems} from "@/constants/menuItem";
 
 const Footer = () => {
+    const { navigateAndScroll } = useNavigateAndScroll();
+
     return (
         <footer className="py-32 px-6 lg:px-0">
             <div className="max-w-4xl mx-auto">
@@ -69,7 +71,7 @@ const Footer = () => {
                                 <ul className="space-y-2 text-sm">
                                     <li>
                                         <button
-                                            onClick={() => handleScroll(item.id)}
+                                            onClick={() => navigateAndScroll(item.id, item.path)}
                                             className="text-sm transition"
                                         >
                                             {item.jp}
@@ -83,7 +85,7 @@ const Footer = () => {
 
                 {/* 下部: コピーライト */}
                 <div className="border-t pt-4 text-center text-sm mt-8">
-                    <p>特定商取引法に基づく表記 | 利用規約 | プライバシーポリシー</p>
+                    {/*<p>特定商取引法に基づく表記 | 利用規約 | プライバシーポリシー</p>*/}
                     <p>© 2020-2025 INOUT</p>
                 </div>
             </div>

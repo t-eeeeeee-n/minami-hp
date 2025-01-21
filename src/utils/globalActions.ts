@@ -11,4 +11,4 @@ export const handleScroll = (id: string) => {
             behavior: "smooth",
         });
     }
-};
+}

@@ -1,8 +1,8 @@
 import Image from "next/image";
 import {FC} from "react";
-import {handleScroll} from "@/utils/globalActions";
-import {menuItems} from "@/constants/constants";
+import {menuItems} from "@/constants/menuItem";
 import {useRouter, usePathname} from "next/navigation";
+import { useNavigateAndScroll } from "@/utils/useNavigateAndScroll";
 
 export type HamburgerProps = {
     isOpen: boolean;
@@ -10,6 +10,7 @@ export type HamburgerProps = {
 }
 
 const Hamburger: FC<HamburgerProps> = ({isOpen, toggleMenu}) => {
+    const { navigateAndScroll } = useNavigateAndScroll();
 
     const pathname = usePathname();
     const router = useRouter();
@@ -28,8 +29,9 @@ const Hamburger: FC<HamburgerProps> = ({isOpen, toggleMenu}) => {
                     <div
                         className="flex items-center cursor-pointer"
                         onClick={() => {
-                            handleScroll("home")
-                            toggleMenu()
+                            navigateAndScroll("home", "/").then(() => {
+                                toggleMenu();
+                            });
                         }}
                     >
                         <Image
@@ -50,31 +52,46 @@ const Hamburger: FC<HamburgerProps> = ({isOpen, toggleMenu}) => {
                 </div>
                 <nav className="w-full">
                     <ul className="space-y-4">
-                        {pathname === "/" ? (
-                            menuItems.map((item, index) => (
-                                <li
-                                    key={index}
-                                    className="flex justify-between items-center border-b border-gray-300 pb-2 cursor-pointer"
-                                    onClick={() => {
-                                        handleScroll(item.id);
-                                        toggleMenu();
-                                    }}
-                                >
-                                    <span className="noto-sans text-sm text-as-primary uppercase">{item.en}</span>
-                                    <span className="text-base font-medium text-primary">{item.jp}</span>
-                                </li>
-                            ))
-                        ) : (
+                        {/*{pathname === "/" ? (*/}
+                        {/*    menuItems.map((item, index) => (*/}
+                        {/*        <li*/}
+                        {/*            key={index}*/}
+                        {/*            className="flex justify-between items-center border-b border-gray-300 pb-2 cursor-pointer"*/}
+                        {/*            onClick={() => {*/}
+                        {/*                navigateAndScroll(item.id, item.path).then(() => {*/}
+                        {/*                    toggleMenu();*/}
+                        {/*                });*/}
+                        {/*            }}*/}
+                        {/*        >*/}
+                        {/*            <span className="noto-sans text-sm text-as-primary uppercase">{item.en}</span>*/}
+                        {/*            <span className="text-base font-medium text-primary">{item.jp}</span>*/}
+                        {/*        </li>*/}
+                        {/*    ))*/}
+                        {/*) : (*/}
+                        {/*    <li*/}
+                        {/*        className="flex justify-center items-center border-b border-gray-300 pb-2 cursor-pointer"*/}
+                        {/*        onClick={() => {*/}
+                        {/*            router.push("/");*/}
+                        {/*            toggleMenu();*/}
+                        {/*        }}*/}
+                        {/*    >*/}
+                        {/*        <span className="noto-sans text-sm text-primary">ホームに戻る</span>*/}
+                        {/*    </li>*/}
+                        {/*)}*/}
+                        {menuItems.map((item, index) => (
                             <li
-                                className="flex justify-center items-center border-b border-gray-300 pb-2 cursor-pointer"
+                                key={index}
+                                className="flex justify-between items-center border-b border-gray-300 pb-2 cursor-pointer"
                                 onClick={() => {
-                                    router.push("/");
-                                    toggleMenu();
+                                    navigateAndScroll(item.id, item.path).then(() => {
+                                        toggleMenu();
+                                    });
                                 }}
                             >
-                                <span className="noto-sans text-sm text-primary">ホームに戻る</span>
+                                <span className="noto-sans text-sm text-as-primary uppercase">{item.en}</span>
+                                <span className="text-base font-medium text-primary">{item.jp}</span>
                             </li>
-                        )}
+                        ))}
                     </ul>
                 </nav>
             </div>
