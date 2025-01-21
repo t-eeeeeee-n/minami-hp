@@ -1,7 +1,6 @@
 import Image from "next/image";
 import {FC} from "react";
 import {menuItems} from "@/constants/menuItem";
-import {useRouter, usePathname} from "next/navigation";
 import { useNavigateAndScroll } from "@/utils/useNavigateAndScroll";
 
 export type HamburgerProps = {
@@ -11,9 +10,6 @@ export type HamburgerProps = {
 
 const Hamburger: FC<HamburgerProps> = ({isOpen, toggleMenu}) => {
     const { navigateAndScroll } = useNavigateAndScroll();
-
-    const pathname = usePathname();
-    const router = useRouter();
 
     return (
         <div
