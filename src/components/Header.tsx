@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Image from "next/image";
 import Hamburger from "@/components/Hamburger";
-import {handleScroll} from "@/utils/globalActions";
 import Link from "next/link";
 
 const Header = () => {
