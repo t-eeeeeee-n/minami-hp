@@ -31,7 +31,7 @@ const Hamburger: FC<HamburgerProps> = ({isOpen, toggleMenu}) => {
                         }}
                     >
                         <Image
-                            src="https://minami-hp.s3.ap-northeast-1.amazonaws.com/S__389940471.jpg"
+                            src="https://minami-hp.s3.ap-northeast-1.amazonaws.com/S__389940471.png"
                             alt="Logo"
                             priority
                             width={25}

@@ -34,7 +34,7 @@ export const profiles: Profile[] = [
         },
     },
     {
-        name: "Genki Shirayama",
+        name: "Genki Usuyama",
         japaneseName: "臼山 元気",
         role: "目黒・白金台店代表",
         message:
@@ -47,7 +47,7 @@ export const profiles: Profile[] = [
         imageSrc:
             "https://minami-hp.s3.ap-northeast-1.amazonaws.com/S__145514503.jpg",
         socialLinks: {
-            instagram: "https://www.instagram.com/example",
+            instagram: "https://www.instagram.com/daifuku_imfine",
         },
     },
 ];

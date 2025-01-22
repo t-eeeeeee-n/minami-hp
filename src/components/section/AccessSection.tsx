@@ -77,6 +77,7 @@ const AccessSection = () => {
                         allowFullScreen={true}
                         loading="lazy"
                         referrerPolicy="no-referrer-when-downgrade"
+                        sandbox="allow-scripts allow-same-origin allow-popups"
                         className="w-full h-[300px] md:h-[400px]"
                     ></iframe>
                 </div>

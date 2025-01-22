@@ -17,7 +17,7 @@ const Footer = () => {
                     <div className="flex flex-col items-start text-left mb-8 md:mb-0">
                         <div className="flex items-center space-x-4 mb-4">
                             <Image
-                                src="https://minami-hp.s3.ap-northeast-1.amazonaws.com/S__389940471.jpg"
+                                src="https://minami-hp.s3.ap-northeast-1.amazonaws.com/S__389940471.png"
                                 alt="INOUT Logo"
                                 width={60}
                                 height={60}
