@@ -14,6 +14,7 @@ const HeroSection = () => {
                         width={800}
                         height={600}
                         className="w-full"
+                        priority
                     />
                 </div>
                 {/* モバイル版の画像 */}
@@ -24,6 +25,7 @@ const HeroSection = () => {
                         width={400}
                         height={300}
                         className="w-full"
+                        priority
                     />
                 </div>
             </div>
