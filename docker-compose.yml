@@ -16,4 +16,5 @@ services:
       - .env
     environment:
       - WATCHPACK_POLLING=true
+      - NEXT_TELEMETRY_DISABLED=1
     command: '/bin/sh -c "bun dev -p 5173"'
