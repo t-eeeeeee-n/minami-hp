@@ -26,7 +26,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: extract-commit-message
     outputs:
-      repository-name: ${{ steps.create-ecr.outputs.repository-name }}
+      repository-name: ${{ steps.check-ecr.outputs.repository-name }}
     permissions:
       id-token: write
       contents: read
