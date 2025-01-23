@@ -1,19 +1,27 @@
+# ベースイメージとしてNode.jsの軽量版を使用
 FROM node:20.9-bullseye-slim
 
-# Set working directory
+# 作業ディレクトリを設定
 WORKDIR /app
 
-# Install bun
-RUN apt-get update && apt-get install -y curl unzip
+# 必要なツールをインストール (curl, unzip)
+RUN apt-get update && apt-get install -y curl unzip && rm -rf /var/lib/apt/lists/*
+
+# bunのインストール
 RUN curl -fsSL https://bun.sh/install | bash
 ENV PATH="/root/.bun/bin:${PATH}"
 
-# Copy source code and install dependencies
+# ソースコードをコピー
 COPY ./ /app/
+
+# 依存関係をインストール
 RUN bun install --force
 
-# Expose the required port
-EXPOSE 5173
+# ビルド
+RUN bun build
 
-# Default command to run bun dev
-CMD ["bun", "dev", "-p", "5173"]
+# 必要なポートを公開 (Next.jsのデフォルトポートは3000)
+EXPOSE 3000
+
+# 実行コマンド
+CMD ["bun", "start"]

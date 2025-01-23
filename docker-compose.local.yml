@@ -1,0 +1,20 @@
+services:
+  frontend:
+    container_name: "minami-hp-container"
+    image: "minami-hp-image"
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile.local
+    working_dir: /app
+    volumes:
+      - ".:/app"
+      - "/app/node_modules"
+    ports:
+      - "5173:5173"
+    tty: true
+    env_file:
+      - .env
+    environment:
+      - WATCHPACK_POLLING=true
+      - NEXT_TELEMETRY_DISABLED=1
+    command: '/bin/sh -c "bun dev -p 5173"'

@@ -5,16 +5,10 @@ services:
     build:
       context: .
       dockerfile: ./docker/Dockerfile
-    working_dir: /app
-    volumes:
-      - ".:/app"
-      - "/app/node_modules"
     ports:
-      - "5173:5173"
-    tty: true
+      - "3000:3000"
     env_file:
       - .env
     environment:
-      - WATCHPACK_POLLING=true
-      - NEXT_TELEMETRY_DISABLED=1
-    command: '/bin/sh -c "bun dev -p 5173"'
+      - NODE_ENV=production
+    restart: unless-stopped
