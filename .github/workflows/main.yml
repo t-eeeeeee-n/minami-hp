@@ -76,18 +76,6 @@ jobs:
           role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
           role-session-name: GitHubActions
 
-
-      # ECR リポジトリポリシーの設定
-      - name: Set ECR Repository Policy
-        run: |
-          REPOSITORY_NAME=${{ needs.extract-commit-message.outputs.repository-name }}
-          # AWSアカウントIDを取得
-          AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
-          # アカウントIDを動的に挿入して、一時的なポリシーファイルを作成
-          sed "s/{{AWS_ACCOUNT_ID}}/${AWS_ACCOUNT_ID}/g" cloudformation/ecr_policy.json > ecr_policy_temp.json
-          # ECRリポジトリにポリシーを設定
-          aws ecr set-repository-policy --repository-name ${REPOSITORY_NAME} --policy-text file://ecr_policy_temp.json
-
       # ECRにログイン
       - uses: aws-actions/amazon-ecr-login@v1
 
