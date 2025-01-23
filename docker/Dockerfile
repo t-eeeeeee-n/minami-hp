@@ -17,11 +17,11 @@ COPY ./ /app/
 # 依存関係をインストール
 RUN bun install --force
 
-# ビルド
-RUN bun build
+# Next.jsのビルド
+RUN npx next build
 
 # 必要なポートを公開 (Next.jsのデフォルトポートは3000)
 EXPOSE 3000
 
 # 実行コマンド
-CMD ["bun", "start"]
+CMD ["npx", "next", "start"]
