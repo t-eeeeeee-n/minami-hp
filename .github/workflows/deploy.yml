@@ -50,7 +50,7 @@ jobs:
         run: |
           echo "$SSH_PRIVATE_KEY" > id_rsa
           chmod 600 id_rsa
-          scp -o StrictHostKeyChecking=no -i id_rsa ./docker-compose.yml ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:~/minami-hp/
+          scp -o StrictHostKeyChecking=no -i id_rsa ./docker-compose.yml ${{ secrets.VPS_USERNAME }}@${{ secrets.VPS_IP }}:~/minami-hp/
 
       # nginx.conf を送信
       - name: Transfer nginx.conf to VPS
