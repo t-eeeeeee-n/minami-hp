@@ -1,7 +1,6 @@
 node_modules
 .git
 .dockerignore
-bun.lockb
 dist
 build
 *.log
