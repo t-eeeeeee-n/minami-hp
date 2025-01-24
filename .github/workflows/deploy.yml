@@ -43,7 +43,7 @@ jobs:
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         run: |
-          echo "$SSH_PRIVATE_KEY" | base64 -d > id_rsa
+          echo "$SSH_PRIVATE_KEY" > id_rsa
           chmod 600 id_rsa
           scp -o StrictHostKeyChecking=no -i id_rsa docker-compose.yml ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:~/minami-hp/
 
