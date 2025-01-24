@@ -25,7 +25,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .
-          dockerfile: ./docker/Dockerfile
+          file: ./docker/Dockerfile
           push: true
           tags: ghcr.io/${{ secrets.GHCR_USERNAME }}/${{ github.event.repository.name }}:latest
 
