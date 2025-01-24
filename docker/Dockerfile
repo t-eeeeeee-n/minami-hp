@@ -13,7 +13,8 @@ ENV PATH="/root/.bun/bin:${PATH}"
 
 # 依存関係をインストール (メモリ使用を最小化する工夫を加える)
 # 1. 先にパッケージ関連ファイルのみをコピー
-COPY package.json bun.lockb /app/
+COPY package.json /app/
+COPY bun.lockb /app/
 
 # 2. 依存関係をインストール
 RUN bun install
