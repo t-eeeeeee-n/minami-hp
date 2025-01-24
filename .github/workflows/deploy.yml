@@ -38,7 +38,9 @@ jobs:
       - name: Install SSH client
         run: sudo apt-get install -y openssh-client
 
-      # docker-compose.yml を送信
+      - name: List workspace files
+        run: ls -al
+
       - name: Transfer docker-compose.yml to VPS
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
