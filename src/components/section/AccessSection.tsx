@@ -73,12 +73,10 @@ const AccessSection = () => {
                 <div className="w-full rounded-lg shadow-lg overflow-hidden">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.2152753292503!2d139.77283697659104!3d35.671700930495945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018896721d00fad%3A0x64beca37283b31e7!2z44OR44O844K944OK44Or44K444OgSU5PVVQg6YqA5bqn44O75paw5a-M5bqX!5e0!3m2!1sja!2sjp!4v1737135502420!5m2!1sja!2sjp"
-                        style={{border: 0}}
                         allowFullScreen={true}
                         loading="lazy"
                         referrerPolicy="no-referrer-when-downgrade"
-                        sandbox="allow-scripts allow-same-origin allow-popups"
-                        className="w-full h-[300px] md:h-[400px]"
+                        className="w-full h-[300px] md:h-[400px] border-none"
                     ></iframe>
                 </div>
             </div>
