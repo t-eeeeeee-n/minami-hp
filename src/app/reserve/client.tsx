@@ -4,17 +4,6 @@ import React, { useState, ChangeEvent, FormEvent } from "react";
 import toast from "react-hot-toast";
 import {sendEmail} from "@/utils/sendEmail";
 import Spinner from "@/components/Spinner";
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-    title: '体験予約 - INOUTジム',
-    description: 'INOUTジムの体験予約はこちら。新富町・目黒のパーソナルジムで、初回体験を受付中。お気軽にお問い合わせください。',
-    openGraph: {
-        title: '体験予約 - INOUTジム',
-        description: 'INOUTジムの体験予約ページ。新富町・目黒でのパーソナルトレーニング体験を受付中。',
-        url: 'https://minami-hp.s3.ap-northeast-1.amazonaws.com/24078482_m.jpg',
-    },
-};
 
 type FormData = {
     name: string;

@@ -1,5 +1,6 @@
 import React from "react";
 import { Metadata } from 'next';
+import Head from "next/head";
 import Client from "@/app/method/client";
 
 export const metadata: Metadata = {
@@ -13,7 +14,34 @@ export const metadata: Metadata = {
 };
 
 const Page = () => {
-    return <Client />
+    const schemaOrgJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "選ばれる理由 - INOUTジム",
+        "description": "INOUTジムの独自メソッドをご紹介。",
+        "author": {
+            "@type": "Organization",
+            "name": "INOUTジム"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "INOUTジム"
+        }
+    };
+
+    return (
+        <>
+            <Head>
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrgJsonLd) }}
+                />
+            </Head>
+            <main>
+                <Client />
+            </main>
+        </>
+    )
 };
 
 export default Page;

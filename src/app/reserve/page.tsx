@@ -1,5 +1,6 @@
 import React from "react";
 import { Metadata } from 'next';
+import Head from "next/head";
 import Client from "@/app/reserve/client";
 
 export const metadata: Metadata = {
@@ -13,8 +14,53 @@ export const metadata: Metadata = {
 };
 
 const Page: React.FC = () => {
+    const schemaOrgJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": "INOUTジム 体験予約",
+        "description": "INOUTジムの体験予約はこちら。",
+        "startDate": "2024-02-01T10:00:00+09:00",
+        "location": [
+            {
+                "@type": "Place",
+                "name": "INOUTジム 新富店",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "東京都中央区新富町1-17-6 正金アパートメント入船 204",
+                    "addressLocality": "中央区",
+                    "addressRegion": "東京都",
+                    "postalCode": "104-0041",
+                    "addressCountry": "JP"
+                }
+            },
+            {
+                "@type": "Place",
+                "name": "INOUTジム 目黒店",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "東京都品川区上大崎1-5-63 エクセレント白金台 201",
+                    "addressLocality": "品川区",
+                    "addressRegion": "東京都",
+                    "postalCode": "141-0021",
+                    "addressCountry": "JP"
+                }
+            }
+        ]
+    };
 
-    return <Client />
+    return (
+        <>
+            <Head>
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrgJsonLd) }}
+                />
+            </Head>
+            <main>
+                <Client />
+            </main>
+        </>
+    )
 };
 
 export default Page;
