@@ -7,7 +7,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import {Toaster} from "react-hot-toast";
 import {DEFAULT_METADATA} from "@/constants/metadata";
-import { SCHEMA_ORG_JSON } from '@/constants/schema';
 
 export const metadata: Metadata = DEFAULT_METADATA;
 
@@ -15,14 +14,6 @@ export default function RootLayout({children,}: { children: React.ReactNode;
 }) {
     return (
         <html lang="ja">
-            <head>
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_ORG_JSON) }}
-                />
-                <title>{metadata.title as string}</title>
-                <meta name="description" content={metadata.description as string} />
-            </head>
             <body>
                 <Toaster
                     position="top-center"
