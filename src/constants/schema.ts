@@ -50,5 +50,8 @@ export const DEFAULT_SCHEMA_ORG_JSON = {
             "opens": "09:00",
             "closes": "22:00"
         }
+    ],
+    "sameAs": [
+        "https://www.instagram.com/__inoutgym__/?hl=ja"
     ]
 };
