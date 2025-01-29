@@ -17,7 +17,7 @@ const Page = () => {
     const schemaOrgJsonLd = {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "選ばれる理由 - INOUTメソッド",
+        "headline": "選ばれる理由 - INOUTジム",
         "description": "INOUTジムの独自メソッドをご紹介。",
         "author": {
             "@type": "Organization",
