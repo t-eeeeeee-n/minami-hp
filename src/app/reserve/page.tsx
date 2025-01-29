@@ -19,14 +19,17 @@ const Page: React.FC = () => {
         "@type": "Event",
         "name": "INOUTジム 体験予約",
         "description": "INOUTジムの体験予約はこちら。",
-        "startDate": "2024-02-01T10:00:00+09:00",
+        "startDate": "2025-02-01T10:00:00+09:00",
+        "endDate": "2025-12-31T22:00:00+09:00",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
         "location": [
             {
                 "@type": "Place",
-                "name": "INOUTジム 新富店",
+                "name": "INOUTジム 新富町店",
                 "address": {
                     "@type": "PostalAddress",
-                    "streetAddress": "東京都中央区新富町1-17-6 正金アパートメント入船 204",
+                    "streetAddress": "東京都中央区新富1-17-6 正金アパートメント入船 204",
                     "addressLocality": "中央区",
                     "addressRegion": "東京都",
                     "postalCode": "104-0041",
@@ -45,7 +48,12 @@ const Page: React.FC = () => {
                     "addressCountry": "JP"
                 }
             }
-        ]
+        ],
+        "organizer": {
+            "@type": "Organization",
+            "name": "INOUTジム",
+            "url": "https://inoutgyms.com/"
+        }
     };
 
     return (
