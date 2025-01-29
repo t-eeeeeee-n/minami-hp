@@ -25,10 +25,19 @@ const Page = () => {
         },
         "publisher": {
             "@type": "Organization",
-            "name": "INOUTジム"
+            "name": "INOUTジム",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://minami-hp.s3.ap-northeast-1.amazonaws.com/24078482_m.jpg"
+            }
+        },
+        "datePublished": "2025-02-01",
+        "dateModified": "2025-02-01",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://inoutgyms.com/method"
         }
     };
-
     return (
         <>
             <Head>
