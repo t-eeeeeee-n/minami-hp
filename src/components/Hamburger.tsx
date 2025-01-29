@@ -48,32 +48,6 @@ const Hamburger: FC<HamburgerProps> = ({isOpen, toggleMenu}) => {
                 </div>
                 <nav className="w-full">
                     <ul className="space-y-4">
-                        {/*{pathname === "/" ? (*/}
-                        {/*    menuItems.map((item, index) => (*/}
-                        {/*        <li*/}
-                        {/*            key={index}*/}
-                        {/*            className="flex justify-between items-center border-b border-gray-300 pb-2 cursor-pointer"*/}
-                        {/*            onClick={() => {*/}
-                        {/*                navigateAndScroll(item.id, item.path).then(() => {*/}
-                        {/*                    toggleMenu();*/}
-                        {/*                });*/}
-                        {/*            }}*/}
-                        {/*        >*/}
-                        {/*            <span className="noto-sans text-sm text-as-primary uppercase">{item.en}</span>*/}
-                        {/*            <span className="text-base font-medium text-primary">{item.jp}</span>*/}
-                        {/*        </li>*/}
-                        {/*    ))*/}
-                        {/*) : (*/}
-                        {/*    <li*/}
-                        {/*        className="flex justify-center items-center border-b border-gray-300 pb-2 cursor-pointer"*/}
-                        {/*        onClick={() => {*/}
-                        {/*            router.push("/");*/}
-                        {/*            toggleMenu();*/}
-                        {/*        }}*/}
-                        {/*    >*/}
-                        {/*        <span className="noto-sans text-sm text-primary">ホームに戻る</span>*/}
-                        {/*    </li>*/}
-                        {/*)}*/}
                         {menuItems.map((item, index) => (
                             <li
                                 key={index}

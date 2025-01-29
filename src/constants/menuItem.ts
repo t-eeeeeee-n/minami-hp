@@ -19,5 +19,5 @@ export const menuItems: MenuItem[] = [
     { id: "apply-flow", en: "Apply Flow", jp: "お申込みの流れ", path: "/", scrollBox: true, icon: "play_circle" },
     { id: "trial-flow", en: "Trial Flow", jp: "体験のお申込み", path: "/", scrollBox: false },
     { id: "access", en: "Access", jp: "アクセス", path: "/", scrollBox: false },
-    { id: "contact", en: "Contact", jp: "お問い合わせ", path: "/reserve", scrollBox: false },
+    { id: "reserve", en: "Reserve", jp: "体験予約", path: "/reserve", scrollBox: false },
 ];
