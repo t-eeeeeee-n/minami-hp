@@ -34,6 +34,8 @@ export const DEFAULT_METADATA: Metadata = {
     keywords: [
         '新富町 ジム',
         '新富町 パーソナルジム',
+        '築地 ジム',
+        '築地 パーソナルジム',
         '目黒 ジム',
         '目黒 パーソナルジム',
         'パーソナルトレーニング',
