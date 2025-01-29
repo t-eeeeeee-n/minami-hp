@@ -13,7 +13,8 @@ export const DEFAULT_SCHEMA_ORG_JSON = {
             "addressLocality": "中央区",
             "addressRegion": "東京都",
             "postalCode": "104-0041",
-            "addressCountry": "JP"
+            "addressCountry": "JP",
+            "name": "INOUT 新富町店"
         },
         {
             "@type": "PostalAddress",
@@ -21,7 +22,8 @@ export const DEFAULT_SCHEMA_ORG_JSON = {
             "addressLocality": "品川区",
             "addressRegion": "東京都",
             "postalCode": "141-0021",
-            "addressCountry": "JP"
+            "addressCountry": "JP",
+            "name": "INOUT 目黒店"
         }
     ],
     "contactPoint": {
