@@ -39,13 +39,13 @@ export const DEFAULT_SCHEMA_ORG_JSON = {
         {
             "@type": "OpeningHoursSpecification",
             "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-            "opens": "10:00",
+            "opens": "09:00",
             "closes": "22:00"
         },
         {
             "@type": "OpeningHoursSpecification",
             "dayOfWeek": ["Saturday", "Sunday"],
-            "opens": "10:00",
+            "opens": "09:00",
             "closes": "22:00"
         }
     ]
