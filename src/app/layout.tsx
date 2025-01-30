@@ -16,21 +16,23 @@ export default function RootLayout({children,}: { children: React.ReactNode;
 }) {
     return (
         <html lang="ja">
-            <head>
-                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(DEFAULT_SCHEMA_ORG_JSON) }} />
-            </head>
-            <body>
-                <Toaster
-                    position="top-center"
-                     toastOptions={{
-                         duration: 5000,
-                         className: 'single-line-toast',
-                     }}
-                />
-                <Header/>
-                {children}
-                <Footer/>
-            </body>
+        <head>
+            <link rel="canonical" href="https://inoutgyms.com/"/>
+            <script type="application/ld+json"
+                    dangerouslySetInnerHTML={{__html: JSON.stringify(DEFAULT_SCHEMA_ORG_JSON)}}/>
+        </head>
+        <body>
+        <Toaster
+            position="top-center"
+            toastOptions={{
+                duration: 5000,
+                className: 'single-line-toast',
+            }}
+        />
+        <Header/>
+        {children}
+        <Footer/>
+        </body>
         </html>
     );
 }
