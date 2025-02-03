@@ -32,6 +32,8 @@ export const DEFAULT_METADATA: Metadata = {
         apple: '/apple-touch-icon.png',
     },
     keywords: [
+        'INOUT ジム',
+        'INOUT パーソナルジム',
         '新富町 ジム',
         '新富町 パーソナルジム',
         '築地 ジム',
