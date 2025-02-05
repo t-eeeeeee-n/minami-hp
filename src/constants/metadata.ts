@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 
 export const DEFAULT_METADATA: Metadata = {
-    title: 'INOUTジム - 心身共に豊かにするパーソナルジム',
+    title: 'INOUT | 新富町・目黒のパーソナルジム - 初心者歓迎・無料体験あり',
     description: 'INOUTは新富町・目黒エリアで、パーソナルトレーニング、栄養指導、メンタルケアを提供するジムです。理想の体作りと健康的なライフスタイルをトータルサポート。初めての方でも安心のプログラムが充実！',
     openGraph: {
         title: 'INOUTジム - 心身共に豊かにするパーソナルジム',

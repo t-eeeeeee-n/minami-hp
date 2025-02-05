@@ -28,6 +28,9 @@ const HeroSection = () => {
                         priority
                     />
                 </div>
+                <h1 className="text-sm font-semibold text-gray-500 text-center">
+                    INOUTは、新富町・目黒エリアのパーソナルジム。心身共に豊かにするトレーニングを提供
+                </h1>
             </div>
         </div>
     );
