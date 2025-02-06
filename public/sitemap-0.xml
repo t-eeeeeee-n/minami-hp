@@ -11,6 +11,10 @@
         <lastmod>2025-02-02T10:00:00Z</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://minami-hp.s3.ap-northeast-1.amazonaws.com/24078482_m.jpg</image:loc>
+            <image:title>INOUT Gym - 理想の体作りを実現するジム</image:title>
+        </image:image>
     </url>
 
     <url>
@@ -18,6 +22,10 @@
         <lastmod>2025-02-02T10:00:00Z</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://inoutgyms.com/images/reserve-page.jpg</image:loc>
+            <image:title>INOUT - 予約ページ</image:title>
+        </image:image>
     </url>
 
     <url>
@@ -25,6 +33,10 @@
         <lastmod>2025-02-02T10:00:00Z</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://inoutgyms.com/images/method-page.jpg</image:loc>
+            <image:title>INOUT - トレーニングメソッド</image:title>
+        </image:image>
     </url>
 
     <url>
