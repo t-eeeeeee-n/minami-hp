@@ -4,7 +4,7 @@
 
     <url>
         <loc>https://inoutgyms.com/</loc>
-        <lastmod>2025-02-02T10:00:00Z</lastmod>
+        <lastmod>2025-02-25T10:00:00Z</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         <image:image>
@@ -14,27 +14,27 @@
 
     <url>
         <loc>https://inoutgyms.com/reserve</loc>
-        <lastmod>2025-02-02T10:00:00Z</lastmod>
+        <lastmod>2025-02-25T10:00:00Z</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
         <image:image>
-            <image:loc>https://inoutgyms.com/images/reserve-page.jpg</image:loc>
+            <image:loc>https://minami-hp.s3.ap-northeast-1.amazonaws.com/24078482_m.jpg</image:loc>
         </image:image>
     </url>
 
     <url>
         <loc>https://inoutgyms.com/method</loc>
-        <lastmod>2025-02-02T10:00:00Z</lastmod>
+        <lastmod>2025-02-25T10:00:00Z</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
         <image:image>
-            <image:loc>https://inoutgyms.com/images/method-page.jpg</image:loc>
+            <image:loc>https://minami-hp.s3.ap-northeast-1.amazonaws.com/24078482_m.jpg</image:loc>
         </image:image>
     </url>
 
     <url>
         <loc>https://inoutgyms.com/manifest.json</loc>
-        <lastmod>2025-02-02T10:00:00Z</lastmod>
+        <lastmod>2025-02-25T10:00:00Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.3</priority>
     </url>
