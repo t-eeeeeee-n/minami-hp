@@ -20,6 +20,7 @@ export default function RootLayout({children,}: { children: React.ReactNode;
             <link rel="canonical" href="https://inoutgyms.com/"/>
             <script type="application/ld+json"
                     dangerouslySetInnerHTML={{__html: JSON.stringify(DEFAULT_SCHEMA_ORG_JSON)}}/>
+            <meta name="thumbnail" content="https://minami-hp.s3.ap-northeast-1.amazonaws.com/24078482_m.jpg" />
         </head>
         <body>
         <Toaster
