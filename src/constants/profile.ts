@@ -27,7 +27,7 @@ export const profiles: Profile[] = [
         message:
             "元大手パーソナルジムで年間200名以上の方を指導して来ました。\n皆様が持っているセンスやポテンシャル、考え方など1人1人違います。\nそれぞれの個別性を大切に。",
         imageSrc:
-            "https://minami-hp.s3.ap-northeast-1.amazonaws.com/profile_1662367589441.avif",
+            "https://minami-hp.s3.ap-northeast-1.amazonaws.com/profile.png",
         socialLinks: {
             instagram: "https://www.instagram.com/__inoutgym__/?hl=ja",
             line: "https://line.me/R/ti/p/@243otxyn",
