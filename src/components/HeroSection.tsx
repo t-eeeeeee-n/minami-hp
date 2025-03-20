@@ -9,7 +9,7 @@ const HeroSection = () => {
                 {/* Web版の画像 */}
                 <div className="hidden md:block">
                     <Image
-                        src="https://minami-hp.s3.ap-northeast-1.amazonaws.com/S__39444563.jpg"
+                        src="https://minami-hp.s3.ap-northeast-1.amazonaws.com/S__40108198.jpg"
                         alt="hero"
                         width={800}
                         height={600}
@@ -20,7 +20,7 @@ const HeroSection = () => {
                 {/* モバイル版の画像 */}
                 <div className="block md:hidden">
                     <Image
-                        src="https://minami-hp.s3.ap-northeast-1.amazonaws.com/S__39428386.jpg"
+                        src="https://minami-hp.s3.ap-northeast-1.amazonaws.com/S__40108196.jpg"
                         alt="hero"
                         width={400}
                         height={300}

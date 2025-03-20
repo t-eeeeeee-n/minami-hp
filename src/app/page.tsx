@@ -15,6 +15,7 @@ import Campaign from "@/components/Campaign";
 import React from "react";
 import FeaturesSection from "@/components/section/FeaturesSection";
 
+
 export default function HomePage() {
     return (
         <>
