@@ -64,14 +64,16 @@ const Campaign = () => {
                 {/*    </div>*/}
                 {/*</div>*/}
 
-                <Image
-                    src="https://minami-hp.s3.ap-northeast-1.amazonaws.com/S__40100041.jpg"
-                    alt="hero"
-                    width={800}
-                    height={600}
-                    className="w-80"
-                    priority
-                />
+                <div className="animate-slide-vertical-sm">
+                    <Image
+                        src="https://minami-hp.s3.ap-northeast-1.amazonaws.com/S__40100041.jpg"
+                        alt="hero"
+                        width={800}
+                        height={600}
+                        className="w-48 md:w-64 lg:w-80"
+                        priority
+                    />
+                </div>
             </Link>
 
         </div>
