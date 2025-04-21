@@ -29,7 +29,7 @@ export const DEFAULT_METADATA: Metadata = {
     },
     icons: {
         icon: '/favicon.ico',
-        apple: '/apple-touch-icon.png',
+        apple: '/apple-icon.png',
     },
     keywords: [
         'INOUT ジム',
