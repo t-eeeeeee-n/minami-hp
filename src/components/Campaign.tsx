@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { event } from "@/lib/gtag";
 
 const Campaign = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -22,6 +23,14 @@ const Campaign = () => {
         };
     }, []);
 
+    const handleClick = () => {
+        event({
+            action: 'click',
+            category: 'CampaignBanner',
+            label: 'campaign-bottom-banner',
+        });
+    };
+
     return (
         <div
             className={`fixed bottom-0 left-1/2 transform -translate-x-1/2 w-full max-w-4xl flex justify-center py-4 px-6 md:py-4 md:px-0 z-50 transition-transform duration-300 ${
@@ -29,7 +38,7 @@ const Campaign = () => {
             }`}
         >
 
-            <Link href="/reserve" className="">
+            <Link href="/reserve" onClick={handleClick}>
                 {/*<div*/}
                 {/*    className="bg-green-500 text-white py-2 px-2 flex items-center justify-center w-full rounded-lg shadow-lg animate-slide-vertical-sm"*/}
                 {/*>*/}
