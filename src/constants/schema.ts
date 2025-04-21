@@ -5,6 +5,8 @@ export const DEFAULT_SCHEMA_ORG_JSON = {
     "name": "INOUTジム",
     "description": "INOUTは新富町・目黒エリアで、パーソナルトレーニング、栄養指導、メンタルケアを提供するジムです。理想の体作りと健康的なライフスタイルをトータルサポート。初めての方でも安心のプログラムが充実！",
     "url": "https://inoutgyms.com/",
+    "thumbnailUrl":
+        "https://minami-hp.s3.ap-northeast-1.amazonaws.com/24078482_m.jpg",
     "telephone": "080-4131-9781",
     "email": "gym.inout.official@gmail.com",
     "image": ["https://minami-hp.s3.ap-northeast-1.amazonaws.com/24078482_m.jpg"],
