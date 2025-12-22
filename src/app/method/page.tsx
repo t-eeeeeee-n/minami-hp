@@ -1,6 +1,5 @@
 import React from "react";
 import { Metadata } from 'next';
-import Head from "next/head";
 import Client from "@/app/method/client";
 
 export const metadata: Metadata = {
@@ -40,12 +39,10 @@ const Page = () => {
     };
     return (
         <>
-            <Head>
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrgJsonLd) }}
-                />
-            </Head>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrgJsonLd) }}
+            />
             <main>
                 <Client />
             </main>
