@@ -1,5 +1,9 @@
 name: CI/CD Pipeline
 
+permissions:
+  packages: write
+  contents: read
+
 on:
   push:
     branches:
