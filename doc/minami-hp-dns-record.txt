@@ -1,0 +1,10 @@
+A（ホスト）
+ホスト名	値	TTL
+inoutgyms.com	185.230.63.107	1時間	
+inoutgyms.com	185.230.63.186	1時間	
+inoutgyms.com	185.230.63.171	1時間	
+
+CNAME（エイリアス）
+ホスト名	値	TTL
+www.inoutgyms.com	cdn1.wixdns.net	1時間
+

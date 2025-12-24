@@ -1,0 +1,42 @@
+# (local) server接続
+ssh -i ~/keys/minami-hp-key.pem ubuntu@13.114.84.100
+
+# (server) docker install
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+
+# (server) docker compose install
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+
+# (server) install 確認
+docker --version
+docker-compose --version
+
+# (server) user設定
+sudo usermod -aG docker $USER
+newgrp docker
+
+# (local) project upload
+mkdir deploy
+cp -r docker deploy/
+cp -r nginx deploy/
+cp -r public deploy/
+cp -r src deploy/
+cp .env deploy/
+cp bun.lockb deploy
+cp docker-compose.yml deploy/
+cp next.config.ts deploy/
+cp next-env.d.ts deploy/
+cp package.json deploy/
+cp postcss.config.mjs deploy/
+cp tailwind.config.ts deploy/
+cp tsconfig.json deploy/
+
+scp -i ~/keys/minami-hp-key.pem -r /c/workspace/ten/repository/minami-hp/deploy/* ubuntu@13.114.84.100:/home/ubuntu/minami-hp
+scp -i ~/keys/minami-hp-key.pem -r /c/workspace/ten/repository/minami-hp/deploy/.env ubuntu@13.114.84.100:/home/ubuntu/minami-hp
+
+# (server) docker compose 起動
+cd /home/ubuntu/minami-hp
+docker compose build
+docker compose
