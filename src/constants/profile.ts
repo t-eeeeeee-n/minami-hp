@@ -33,21 +33,4 @@ export const profiles: Profile[] = [
             line: "https://line.me/R/ti/p/@243otxyn",
         },
     },
-    {
-        name: "Genki Usuyama",
-        japaneseName: "臼山 元気",
-        role: "目黒・白金台店代表",
-        message:
-            "前職は心身共に鍛える為に航空自衛隊に勤めておりました！\n" +
-            "2022年はSSA関東大会に出場し4位入賞、\n" +
-            "2023年はマッスルゲート奈良大会でTOP5の成績を残しました。\n" +
-            "僕の持っている実践的な知識、" +
-            "ノウハウをわかりやすく丁寧にご指導させて頂けたらと思います！\n" +
-            "宜しくお願い致します！",
-        imageSrc:
-            "https://minami-hp.s3.ap-northeast-1.amazonaws.com/S__145514503.jpg",
-        socialLinks: {
-            instagram: "https://www.instagram.com/daifuku_imfine",
-        },
-    },
 ];

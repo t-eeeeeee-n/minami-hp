@@ -10,7 +10,6 @@ const AccessSection = () => {
             subTitle: "Address",
             content: [
                 { store: "新富店", address: "東京都中央区新富1-17-6 正金アパートメント入船 204" },
-                { store: "目黒店", address: "東京都品川区上大崎1-5-63 エクセレント白金台 201" },
             ],
             isLink: false,
         },

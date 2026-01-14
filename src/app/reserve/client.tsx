@@ -264,7 +264,6 @@ const Client: React.FC = () => {
                             >
                                 <option value="">選択してください</option>
                                 <option value="新富店">新富店</option>
-                                <option value="目黒店">目黒店</option>
                             </select>
                             {errors.store && <p className="mt-1 text-red-500 text-sm">{errors.store}</p>}
                         </div>

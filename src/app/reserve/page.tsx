@@ -4,10 +4,10 @@ import Client from "@/app/reserve/client";
 
 export const metadata: Metadata = {
     title: '体験予約 - INOUTジム',
-    description: 'INOUTジムの体験予約はこちら。新富町・目黒のパーソナルジムで、初回体験を受付中。お気軽にお問い合わせください。',
+    description: 'INOUTジムの体験予約はこちら。新富町のパーソナルジムで、初回体験を受付中。お気軽にお問い合わせください。',
     openGraph: {
         title: '体験予約 - INOUTジム',
-        description: 'INOUTジムの体験予約ページ。新富町・目黒でのパーソナルトレーニング体験を受付中。',
+        description: 'INOUTジムの体験予約ページ。新富町でのパーソナルトレーニング体験を受付中。',
         url: 'https://minami-hp.s3.ap-northeast-1.amazonaws.com/24078482_m.jpg',
     },
 };
@@ -32,18 +32,6 @@ const Page: React.FC = () => {
                     "addressLocality": "中央区",
                     "addressRegion": "東京都",
                     "postalCode": "104-0041",
-                    "addressCountry": "JP"
-                }
-            },
-            {
-                "@type": "Place",
-                "name": "INOUTジム 目黒店",
-                "address": {
-                    "@type": "PostalAddress",
-                    "streetAddress": "東京都品川区上大崎1-5-63 エクセレント白金台 201",
-                    "addressLocality": "品川区",
-                    "addressRegion": "東京都",
-                    "postalCode": "141-0021",
                     "addressCountry": "JP"
                 }
             }
