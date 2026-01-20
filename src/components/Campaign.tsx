@@ -43,7 +43,7 @@ const Campaign = () => {
 
     return (
         <div
-            className={`fixed bottom-6 right-6 z-50 transition-all duration-500 ease-out ${
+            className={`fixed bottom-4 left-4 right-4 md:left-auto md:right-6 md:bottom-6 z-50 transition-all duration-500 ease-out ${
                 isVisible
                     ? "translate-y-0 opacity-100"
                     : "translate-y-8 opacity-0 pointer-events-none"
@@ -60,7 +60,7 @@ const Campaign = () => {
                 </button>
 
                 {/* Popup Card */}
-                <div className="bg-stone-800 rounded-[2rem] p-6 shadow-2xl min-w-[280px]">
+                <div className="bg-stone-800 rounded-[2rem] p-6 shadow-2xl w-full md:min-w-[280px] md:w-auto text-center md:text-left">
                     {/* Label */}
                     <p className="text-stone-400 text-xs tracking-widest mb-4">
                         ウェブ限定キャンペーン

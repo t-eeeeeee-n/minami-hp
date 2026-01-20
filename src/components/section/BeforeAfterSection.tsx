@@ -39,7 +39,7 @@ const BeforeAfterSection = () => {
                         {/* Card */}
                         <div className="relative">
                             {/* Background offset */}
-                            <div className="absolute top-6 -right-4 w-full h-full bg-stone-100 rounded-[2.5rem] -z-10"></div>
+                            <div className="absolute top-6 -right-4 w-full h-full bg-stone-100 rounded-[2.5rem] -z-10 hidden md:block"></div>
 
                             {/* Image Container */}
                             <div className="relative rounded-[2.5rem] overflow-hidden shadow-xl shadow-stone-200/40 group-hover:shadow-2xl transition-all duration-500">

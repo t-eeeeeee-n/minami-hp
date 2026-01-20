@@ -9,11 +9,20 @@ const HeroSection = () => {
         <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
             {/* Full Background Image */}
             <div className="absolute inset-0">
+                {/* Desktop Image */}
                 <Image
                     src="https://minami-hp.s3.ap-northeast-1.amazonaws.com/1768814833766-4aa96dd3-fee3-4d7f-8b15-904fdcf07662_1.jpg"
                     alt="INOUT Personal Gym"
                     fill
-                    className="object-cover object-center"
+                    className="object-cover object-center hidden md:block"
+                    priority
+                />
+                {/* Mobile Image */}
+                <Image
+                    src="https://minami-hp.s3.ap-northeast-1.amazonaws.com/1768814895009-029c9932-ba84-4fa4-bc9f-f4770b540578_1.jpg"
+                    alt="INOUT Personal Gym"
+                    fill
+                    className="object-cover object-center md:hidden"
                     priority
                 />
                 {/* Subtle gradient overlay for better text readability at bottom */}

@@ -45,8 +45,8 @@ const FeaturesSection = () => {
                             <div className="relative">
                                 <div
                                     className={`absolute top-6 ${
-                                        index % 2 === 0 ? "-right-4 md:-right-6" : "-left-4 md:-left-6"
-                                    } w-full h-full bg-stone-100 rounded-[2rem] -z-10`}
+                                        index % 2 === 0 ? "right-0 md:-right-6" : "left-0 md:-left-6"
+                                    } w-full h-full bg-stone-100 rounded-[2rem] -z-10 hidden md:block`}
                                 ></div>
                                 <div className="aspect-[4/3] rounded-[2rem] overflow-hidden shadow-xl">
                                     <Image
