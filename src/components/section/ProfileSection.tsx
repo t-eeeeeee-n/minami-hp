@@ -66,7 +66,7 @@ const ProfileSection = () => {
                                     href={profile.socialLinks.instagram}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="p-3 bg-white rounded-full text-stone-500 hover:text-stone-800 transition-colors shadow-sm hover:shadow-md"
+                                    className="p-3 bg-white rounded-full text-stone-500 hover:text-[#E4405F] transition-colors shadow-sm hover:shadow-md"
                                     aria-label="Instagram"
                                 >
                                     <FaInstagram size={20} />

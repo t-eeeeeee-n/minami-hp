@@ -91,7 +91,7 @@ const Footer = () => {
                                 href="https://www.instagram.com/__inoutgym__/?hl=ja"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="p-3 bg-stone-800 rounded-full text-stone-400 hover:text-white transition-colors"
+                                className="p-3 bg-stone-800 rounded-full text-stone-400 hover:text-[#E4405F] transition-colors"
                                 aria-label="Instagram"
                             >
                                 <FaInstagram size={20} />
