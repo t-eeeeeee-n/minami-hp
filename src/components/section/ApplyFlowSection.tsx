@@ -1,92 +1,91 @@
 "use client";
 
 import React from "react";
-import SectionTitle from "@/components/section/SectionTitle";
 import Image from "next/image";
 
 const ApplyFlowSection = () => {
-
     const steps = [
         {
             id: 1,
             title: "体験お申し込み",
             description:
-                "ご予約方法は下記の2つからお選び頂けます。\n・LINE\n・ご予約フォーム\n\n※各々のお申し込みリンクはページ下部にございます。\n希望日時を指定して、カウンセリングをお申し込みください。",
+                "LINEまたはお問い合わせフォームより、ご希望の日時をお知らせください。",
             imageSrc: "https://minami-hp.s3.ap-northeast-1.amazonaws.com/24497038_m.avif",
         },
         {
             id: 2,
-            title: "ご来店",
+            title: "ご来店・カウンセリング",
             description:
-                "ご来店はご予約された5分前目安にご来店ください。\n当ジムにて、ウェア・シューズ・タオル・ミネラルウォーター、各種無料レンタルしておりますので、手ぶらでお越し頂いて大丈夫です。",
+                "現在の身体のお悩みや目標をヒアリング。ウェア等は全てご用意しています。",
             imageSrc: "https://minami-hp.s3.ap-northeast-1.amazonaws.com/22830622_m.jpg",
         },
         {
             id: 3,
-            title: "カウンセリング",
+            title: "体験トレーニング",
             description:
-                "過去の運動経験や生活習慣、食事内容などについてヒアリングさせていただきます。\n\nそれらをもとに、痩せたい、体調不良を改善したいといった具体的なお力添えの悩みに対してお話しさせていただく流れを取っています。\n\n1. カウンセリング 過去の運動経験や、生活リズム、食事などお客様の今についてお伺いします。\n2. 目標設定 お客様がなりたいカラダをお聞きし、目標を定めます。\n3. プログラムご提案 目標や身体機能に沿って最適なプログラムをご提案します。",
-            imageSrc: "https://minami-hp.s3.ap-northeast-1.amazonaws.com/3868812_m.jpg",
-        },
-        {
-            id: 4,
-            title: "トレーニング",
-            description:
-                "カウンセリングさせて頂いた内容を元に、最適なトレーニングメニューを実施させて頂きます。",
+                "実際のセッションを体験。無理のない範囲で、プロの指導を体感してください。",
             imageSrc: "https://minami-hp.s3.ap-northeast-1.amazonaws.com/24078484_m.jpg",
         },
         {
-            id: 5,
-            title: "アフターカウンセリング",
+            id: 4,
+            title: "プランのご提案",
             description:
-                "トレーニングを終えた後は、ご質問や今後のプラン等詳しくお話しさせて頂きます。\nトレーニング後はプロテインの補給も可能です。",
+                "体験後、お客様に最適なプランをご提案します。強引な勧誘は一切ありません。",
             imageSrc: "https://minami-hp.s3.ap-northeast-1.amazonaws.com/24078482_m.jpg",
         },
     ];
 
     return (
-        <div className="max-w-4xl mx-auto">
-            {/* セクションタイトル */}
-            <SectionTitle label="Apply Flow">
-                お申し込みの流れ
-            </SectionTitle>
+        <div className="max-w-3xl mx-auto">
+            {/* Header */}
+            <div className="flex flex-col items-center mb-16 md:mb-20">
+                <span className="text-stone-400 font-bold tracking-widest text-xs uppercase mb-3">
+                    FLOW
+                </span>
+                <h2 className="text-2xl md:text-3xl font-semibold text-stone-800 text-center">
+                    無料体験の流れ
+                </h2>
+            </div>
 
-            {/* ステップリスト */}
-            <div className="flex flex-col">
-                {steps.map((step, index) => (
-                    <React.Fragment key={step.id}>
+            {/* Steps */}
+            <div className="relative">
+                {/* Connector Line */}
+                <div className="absolute top-8 left-8 w-0.5 h-[85%] bg-stone-200 hidden md:block"></div>
+
+                <div className="space-y-8">
+                    {steps.map((step) => (
                         <div
-                            className={`flex flex-col md:flex-row ${
-                                index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                            } md:p-6 rounded-2xl bg-white border-2 border-primary`}
+                            key={step.id}
+                            className="flex flex-col md:flex-row items-start relative bg-white p-8 md:p-6 rounded-3xl shadow-sm border border-stone-100 hover:border-stone-200 hover:shadow-md transition-all duration-300"
                         >
-                            <div className="md:w-3/4 p-6 pt-8 md:pt-6 rounded-lg">
-                                <h3 className="text-base font-bold text-center mb-8 md:mb-6 border-primary border-b-2">
-                                    <span>{step.title}</span>
-                                </h3>
-                                <p className="leading-6 text-xs">{step.description}</p>
+                            {/* Number Badge */}
+                            <div className="flex-shrink-0 w-16 h-16 bg-stone-100 rounded-2xl flex items-center justify-center text-xl font-medium text-stone-600 mb-6 md:mb-0 md:mr-10 md:ml-2 relative z-10">
+                                {String(step.id).padStart(2, "0")}
                             </div>
-                            <div className="md:w-1/4 px-6 pb-6 md:p-0 flex justify-center md:items-center">
+
+                            {/* Content */}
+                            <div className="flex-1 pt-2">
+                                <h3 className="text-lg font-semibold text-stone-800 mb-3">
+                                    {step.title}
+                                </h3>
+                                <p className="text-stone-600 text-sm leading-relaxed font-light">
+                                    {step.description}
+                                </p>
+                            </div>
+
+                            {/* Thumbnail */}
+                            <div className="hidden lg:block w-20 h-20 rounded-2xl overflow-hidden ml-6 flex-shrink-0">
                                 <Image
                                     src={step.imageSrc}
-                                    alt={`Step ${step.id}`}
-                                    priority
-                                    width={500}
-                                    height={500}
-                                    className="w-auto object-cover md:rounded-none"
+                                    alt={step.title}
+                                    width={80}
+                                    height={80}
+                                    className="w-full h-full object-cover"
                                 />
                             </div>
                         </div>
-
-                        {/* ステップ間の矢印アイコン */}
-                        {index < steps.length - 1 && (
-                            <div className="flex justify-center my-4">
-                                <span
-                                    className="material-symbols-outlined text-primary text-3xl">keyboard_arrow_down</span>
-                            </div>
-                        )}
-                    </React.Fragment>
-                ))}
+                    ))}
+                </div>
             </div>
         </div>
     );

@@ -1,55 +1,71 @@
 "use client";
 
 import React from "react";
-import SectionTitle from "@/components/section/SectionTitle";
+import Image from "next/image";
+import { FaCheck } from "react-icons/fa";
 
 const AboutSection = () => {
+    const features = [
+        "完全個室・予約制のプライベート空間",
+        "ウェア・タオル・水 無料レンタル（手ぶらでOK）",
+        "お子様連れ・ペアトレーニングも歓迎",
+    ];
+
     return (
-        <div className="max-w-4xl mx-auto">
-            <div className="md:text-center mx-auto">
-                <SectionTitle label="About us">
-                    <span className="noto-sans">INOUT</span>とは
-                </SectionTitle>
-                <div className="text-sm md:text-base leading-7 md:leading-8">
-                    <p className="mb-2 md:mb-4">
-                        パーソナルトレーナーとマンツーマンで
-                        <span className="text-as-primary">自分の身体を鍛え</span>、
-                        <span className="text-as-primary">成功を積み重ね</span>、
-                        <span className="text-as-primary">健康を維持できる</span>。
-                    </p>
-                    <p className="mb-2 md:mb-4">
-                        それは
-                        <span className="text-as-primary">日頃から頑張っている自分への特別なご褒美</span>
-                        に他なりません。
-                    </p>
-                    <p className="mb-2 md:mb-4">
-                        運動は運を動かし、それにより生活習慣を整える事ができ、
-                        <span className="hidden md:block h-0"></span>
-                        <span className="text-as-primary">理想の身体を持てる事で充実した日々</span>
-                        を送れます。
-                    </p>
-                    <p className="mb-2 md:mb-4">
-                        その為に、その人本来のポテンシャルを引き出すためにあらゆる知識、技術、まごころを尽くし、
-                        <span className="hidden md:block h-0"></span>
-                        お客様の身近なサービスとして応えたい。
-                    </p>
-                    <p className="mb-2 md:mb-4">
-                        そして低価格かつ
-                        <span className="text-as-primary">1人1人のライフスタイルに合わせたコース設定</span>
-                        にて、
-                        <span className="hidden md:block h-0"></span>
-                        多くの方に
-                        <span className="text-as-primary">無理なく継続可能なジムをコンセプト</span>
-                        としております。
-                    </p>
-                    <p className="mb-2 md:mb-4">
-                        また、当ジムのINOUT（イナウト）には、
-                        <span className="hidden md:block h-0"></span>
-                        INとOUT、ジムと外の境界を無くし繋ぎ合わたいという願いを込めており、
-                        <span className="hidden md:block h-0"></span>
-                        <span className="text-as-primary">より多くの方に幸せと健康を届けさせて頂ければな</span>
-                        と思います。
-                    </p>
+        <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-16 md:gap-20 items-center">
+                {/* Image */}
+                <div className="order-2 md:order-1 relative px-4 md:px-0">
+                    <div className="absolute top-8 -left-4 md:-left-8 w-full h-full bg-stone-100 rounded-[2.5rem] -z-10"></div>
+                    <div className="aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl">
+                        <Image
+                            src="https://minami-hp.s3.ap-northeast-1.amazonaws.com/S__39600159.jpg"
+                            alt="Training Scene"
+                            width={600}
+                            height={750}
+                            className="object-cover w-full h-full hover:scale-105 transition-all duration-1000"
+                        />
+                    </div>
+                </div>
+
+                {/* Content */}
+                <div className="order-1 md:order-2">
+                    <span className="text-stone-400 font-bold tracking-widest text-xs mb-3 block uppercase">
+                        CONCEPT
+                    </span>
+                    <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-stone-800 mb-10 leading-snug">
+                        内側と外側から、
+                        <br />
+                        理想のあなたへ。
+                    </h2>
+                    <div className="space-y-6 text-stone-600 leading-8 font-light">
+                        <p>
+                            INOUT（インアウト）は、トレーニングを通じて身体の「外側」を変えるだけでなく、
+                            食事指導やメンタルケアを通じて「内側」からの変化も大切にするパーソナルジムです。
+                        </p>
+                        <p>
+                            ただ痩せるだけではなく、健康的で持続可能なライフスタイルを提案します。
+                            運動初心者の方から、さらなる高みを目指す方まで、
+                            一人ひとりの目的とペースに合わせたオーダーメイドのプログラムをご提供いたします。
+                        </p>
+
+                        {/* Feature list */}
+                        <div className="pt-6 space-y-4">
+                            {features.map((text, i) => (
+                                <div
+                                    key={i}
+                                    className="flex items-center space-x-4 p-4 bg-stone-50 rounded-2xl"
+                                >
+                                    <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-sm text-stone-400">
+                                        <FaCheck size={14} />
+                                    </div>
+                                    <span className="text-sm font-medium text-stone-700">
+                                        {text}
+                                    </span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import SectionTitle from "@/components/section/SectionTitle";
 import React from "react";
@@ -27,32 +27,61 @@ const FeaturesSection = () => {
     ];
 
     return (
-        <div className="max-w-4xl mx-auto">
-            <SectionTitle label="features"><span className="noto-sans">INOUT</span>の特徴</SectionTitle>
-            <div className="space-y-12">
+        <div className="max-w-6xl mx-auto">
+            <SectionTitle label="Features" subtitle="INOUTの3つの特徴">
+                INOUTの特徴
+            </SectionTitle>
+
+            <div className="space-y-16 md:space-y-24">
                 {points.map((point, index) => (
-                    <div key={index} className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                        {/* 左側：ポイント詳細 */}
-                        <div className="space-y-4">
-                            <h2 className="text-as-primary font-bold">Point <span className="text-2xl">{String(index + 1).padStart(2, '0')}</span></h2>
-                            <h3 className="text-xl font-bold">{point.title}</h3>
-                            <p className="text-sm">{point.description}</p>
+                    <div
+                        key={index}
+                        className={`flex flex-col ${
+                            index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                        } gap-10 md:gap-16 items-center`}
+                    >
+                        {/* Image */}
+                        <div className="w-full md:w-1/2">
+                            <div className="relative">
+                                <div
+                                    className={`absolute top-6 ${
+                                        index % 2 === 0 ? "-right-4 md:-right-6" : "-left-4 md:-left-6"
+                                    } w-full h-full bg-stone-100 rounded-[2rem] -z-10`}
+                                ></div>
+                                <div className="aspect-[4/3] rounded-[2rem] overflow-hidden shadow-xl">
+                                    <Image
+                                        src={point.imageSrc}
+                                        alt={point.title}
+                                        width={600}
+                                        height={450}
+                                        className="w-full h-full object-cover hover:scale-105 transition-all duration-700"
+                                    />
+                                </div>
+                            </div>
                         </div>
-                        {/* 右側：画像 */}
-                        <div className="w-full">
-                            <Image
-                                src={point.imageSrc}
-                                alt={point.title}
-                                width={500}
-                                height={300}
-                                className="rounded-lg object-cover"
-                            />
+
+                        {/* Content */}
+                        <div className="w-full md:w-1/2 space-y-6">
+                            <div className="flex items-baseline gap-4">
+                                <span className="text-5xl font-light text-stone-200">
+                                    {String(index + 1).padStart(2, "0")}
+                                </span>
+                                <span className="text-xs font-medium text-stone-400 tracking-widest uppercase">
+                                    Point
+                                </span>
+                            </div>
+                            <h3 className="text-xl md:text-2xl font-semibold text-stone-800 leading-relaxed">
+                                {point.title}
+                            </h3>
+                            <p className="text-stone-600 leading-relaxed font-light">
+                                {point.description}
+                            </p>
                         </div>
                     </div>
                 ))}
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default FeaturesSection;
