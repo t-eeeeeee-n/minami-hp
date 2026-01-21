@@ -191,6 +191,7 @@ const PlanSection = () => {
                                         alt={service.title}
                                         priority
                                         fill
+                                        sizes="80px"
                                         className="object-contain p-2"
                                     />
                                 </div>

@@ -18,14 +18,15 @@ const ProfileSection = () => {
                         className="bg-stone-50 rounded-[3rem] p-8 md:p-16 flex flex-col md:flex-row items-center gap-10 md:gap-16"
                     >
                         {/* Profile Image */}
-                        <div className="w-48 h-48 md:w-72 md:h-72 flex-shrink-0 bg-white rounded-full overflow-hidden p-2 shadow-lg">
+                        <div className="relative w-48 h-48 md:w-72 md:h-72 flex-shrink-0 bg-white rounded-full overflow-hidden p-2 shadow-lg">
                             <Image
-                                width={300}
-                                height={300}
                                 src={profile.imageSrc}
                                 alt={profile.name}
+                                fill
+                                sizes="(max-width: 768px) 192px, 288px"
+                                quality={90}
                                 priority
-                                className="w-full h-full object-cover rounded-full"
+                                className="object-cover rounded-full"
                             />
                         </div>
 

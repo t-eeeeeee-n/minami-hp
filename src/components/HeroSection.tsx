@@ -11,9 +11,11 @@ const HeroSection = () => {
             <div className="absolute inset-0">
                 {/* Desktop Image */}
                 <Image
-                    src="https://minami-hp.s3.ap-northeast-1.amazonaws.com/1768814833766-4aa96dd3-fee3-4d7f-8b15-904fdcf07662_1.jpg"
+                    src="https://minami-hp.s3.ap-northeast-1.amazonaws.com/1768814833766-4aa96dd3-fee3-4d7f-8b15-904fdcf07662_2.jpg"
                     alt="INOUT Personal Gym"
                     fill
+                    sizes="(max-width: 768px) 0px, 100vw"
+                    quality={90}
                     className="object-cover object-center hidden md:block"
                     priority
                 />
@@ -22,6 +24,8 @@ const HeroSection = () => {
                     src="https://minami-hp.s3.ap-northeast-1.amazonaws.com/1768814895009-029c9932-ba84-4fa4-bc9f-f4770b540578_1.jpg"
                     alt="INOUT Personal Gym"
                     fill
+                    sizes="(max-width: 768px) 100vw, 0px"
+                    quality={90}
                     className="object-cover object-center md:hidden"
                     priority
                 />

@@ -50,6 +50,8 @@ const ConcernsSection = () => {
                         src="https://minami-hp.s3.ap-northeast-1.amazonaws.com/consultation.avif"
                         alt="Consultation"
                         fill
+                        sizes="100vw"
+                        quality={90}
                         className="object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-br from-stone-900/90 via-stone-900/70 to-stone-800/80" />
@@ -174,6 +176,8 @@ const ConcernsSection = () => {
                                 src={cards[0].imgSrc}
                                 alt={cards[0].alt}
                                 fill
+                                sizes="(max-width: 768px) 100vw, 58vw"
+                                quality={90}
                                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                                 style={{ objectPosition: cards[0].objectPosition }}
                                 priority
@@ -206,6 +210,8 @@ const ConcernsSection = () => {
                                         src={card.imgSrc}
                                         alt={card.alt}
                                         fill
+                                        sizes="(max-width: 768px) 100vw, 42vw"
+                                        quality={90}
                                         className="object-cover transition-transform duration-700 group-hover:scale-105"
                                         style={{ objectPosition: card.objectPosition }}
                                         priority

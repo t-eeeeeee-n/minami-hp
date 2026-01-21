@@ -87,6 +87,8 @@ const Client = () => {
                                                 src={method.imageSrc}
                                                 alt={method.title}
                                                 fill
+                                                sizes="(max-width: 768px) 100vw, 40vw"
+                                                quality={90}
                                                 className="object-cover group-hover:scale-105 transition-transform duration-700"
                                             />
                                             {/* Number Badge */}

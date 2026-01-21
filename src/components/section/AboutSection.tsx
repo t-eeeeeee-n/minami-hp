@@ -17,13 +17,14 @@ const AboutSection = () => {
                 {/* Image */}
                 <div className="order-2 md:order-1 relative px-4 md:px-0">
                     <div className="absolute top-8 -left-4 md:-left-8 w-full h-full bg-stone-100 rounded-[2.5rem] -z-10"></div>
-                    <div className="aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl">
+                    <div className="relative aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl">
                         <Image
                             src="https://minami-hp.s3.ap-northeast-1.amazonaws.com/S__39600159.jpg"
                             alt="Training Scene"
-                            width={600}
-                            height={750}
-                            className="object-cover w-full h-full hover:scale-105 transition-all duration-1000"
+                            fill
+                            sizes="(max-width: 768px) 100vw, 800px"
+                            quality={100}
+                            className="object-cover hover:scale-105 transition-all duration-1000"
                         />
                     </div>
                 </div>

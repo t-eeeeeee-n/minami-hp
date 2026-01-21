@@ -48,13 +48,14 @@ const FeaturesSection = () => {
                                         index % 2 === 0 ? "right-0 md:-right-6" : "left-0 md:-left-6"
                                     } w-full h-full bg-stone-100 rounded-[2rem] -z-10 hidden md:block`}
                                 ></div>
-                                <div className="aspect-[4/3] rounded-[2rem] overflow-hidden shadow-xl">
+                                <div className="relative aspect-[4/3] rounded-[2rem] overflow-hidden shadow-xl">
                                     <Image
                                         src={point.imageSrc}
                                         alt={point.title}
-                                        width={600}
-                                        height={450}
-                                        className="w-full h-full object-cover hover:scale-105 transition-all duration-700"
+                                        fill
+                                        sizes="(max-width: 768px) 100vw, 50vw"
+                                        quality={90}
+                                        className="object-cover hover:scale-105 transition-all duration-700"
                                     />
                                 </div>
                             </div>

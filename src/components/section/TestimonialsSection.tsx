@@ -63,11 +63,12 @@ const TestimonialsSection = () => {
                         {/* Image */}
                         <div className="relative h-44 overflow-hidden">
                             <Image
-                                height={200}
-                                width={400}
                                 src={testimonial.imageSrc}
                                 alt={testimonial.name}
-                                className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700"
+                                fill
+                                sizes="(max-width: 768px) 100vw, 33vw"
+                                quality={90}
+                                className="object-cover group-hover:scale-105 transition-transform duration-700"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-white via-white/20 to-transparent"></div>
 

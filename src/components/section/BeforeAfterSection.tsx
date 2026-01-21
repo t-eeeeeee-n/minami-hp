@@ -42,14 +42,15 @@ const BeforeAfterSection = () => {
                             <div className="absolute top-6 -right-4 w-full h-full bg-stone-100 rounded-[2.5rem] -z-10 hidden md:block"></div>
 
                             {/* Image Container */}
-                            <div className="relative rounded-[2.5rem] overflow-hidden shadow-xl shadow-stone-200/40 group-hover:shadow-2xl transition-all duration-500">
+                            <div className="relative aspect-square rounded-[2.5rem] overflow-hidden shadow-xl shadow-stone-200/40 group-hover:shadow-2xl transition-all duration-500">
                                 <Image
                                     src={result.imageSrc}
                                     alt={`Before After ${index + 1}`}
                                     priority
-                                    width={600}
-                                    height={600}
-                                    className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-700"
+                                    fill
+                                    sizes="(max-width: 768px) 100vw, 50vw"
+                                    quality={90}
+                                    className="object-cover group-hover:scale-[1.02] transition-transform duration-700"
                                 />
 
                                 {/* Overlay gradient */}

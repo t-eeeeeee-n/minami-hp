@@ -80,6 +80,7 @@ const ApplyFlowSection = () => {
                                     alt={step.title}
                                     width={80}
                                     height={80}
+                                    sizes="80px"
                                     className="w-full h-full object-cover"
                                 />
                             </div>
