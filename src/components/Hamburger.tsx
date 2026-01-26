@@ -3,7 +3,6 @@
 import { FC } from "react";
 import { menuItems } from "@/constants/menuItem";
 import { useNavigateAndScroll } from "@/utils/useNavigateAndScroll";
-import { FaTimes } from "react-icons/fa";
 import Link from "next/link";
 
 export type HamburgerProps = {
@@ -30,29 +29,6 @@ const Hamburger: FC<HamburgerProps> = ({ isOpen, toggleMenu }) => {
             role="dialog"
             aria-modal="true"
         >
-            {/* Close button */}
-            <button
-                onClick={toggleMenu}
-                className="absolute top-6 right-6 p-2 text-stone-800"
-                aria-label="Close menu"
-            >
-                <FaTimes size={24} />
-            </button>
-
-            {/* Logo */}
-            <div
-                className="absolute top-6 left-6 flex items-center space-x-3 cursor-pointer"
-                onClick={() => {
-                    navigateAndScroll("home", "/").then(() => {
-                        toggleMenu();
-                    });
-                }}
-            >
-                <div className="bg-stone-800 text-stone-50 font-semibold text-lg px-4 py-1.5 rounded-full tracking-widest">
-                    INOUT
-                </div>
-            </div>
-
             {/* Nav Links */}
             {navLinks.map((link) => (
                 <button

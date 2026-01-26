@@ -8,12 +8,12 @@ const BeforeAfterSection = () => {
         {
             imageSrc: "https://minami-hp.s3.ap-northeast-1.amazonaws.com/S__39559220.jpg",
             period: "3ヶ月",
-            age: "30代女性",
+            age: "50代男性",
         },
         {
             imageSrc: "https://minami-hp.s3.ap-northeast-1.amazonaws.com/S__39559218.jpg",
-            period: "2ヶ月",
-            age: "40代男性",
+            period: "3ヶ月",
+            age: "40代女性",
         },
     ];
 
@@ -58,7 +58,7 @@ const BeforeAfterSection = () => {
                             </div>
 
                             {/* Badge */}
-                            <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-white rounded-full px-6 py-3 shadow-lg flex items-center gap-4 z-10">
+                            <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-white rounded-full px-6 py-3 shadow-lg flex items-center gap-4 z-10 whitespace-nowrap">
                                 <div className="text-center">
                                     <p className="text-xs text-stone-400 font-light">期間</p>
                                     <p className="text-sm font-semibold text-stone-800">{result.period}</p>

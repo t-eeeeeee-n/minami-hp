@@ -35,18 +35,18 @@ const HeroSection = () => {
 
             {/* Bottom Content */}
             <div className="absolute bottom-0 left-0 right-0 z-10">
-                <div className="max-w-7xl mx-auto px-6 lg:px-12 pb-24 md:pb-32">
+                <div className="max-w-7xl mx-auto px-6 lg:px-12 pb-20 md:pb-32">
                     {/* Info + CTA Row */}
                     <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
-                        {/* Left: Tagline */}
-                        <div className="text-white">
+                        {/* Left: Tagline - Hidden on mobile to avoid overlap with image text */}
+                        <div className="text-white hidden md:block">
                             <p className="text-white/70 text-xs font-medium tracking-[0.3em] mb-3 uppercase">
                                 Shintomicho Personal Gym
                             </p>
                             <p className="text-lg md:text-xl font-light leading-relaxed">
                                 初心者歓迎・手ぶらでOK
-                                <br className="hidden md:block" />
-                                <span className="hidden md:inline">完全個室の</span>プライベート空間
+                                <br />
+                                完全個室のプライベート空間
                             </p>
                         </div>
 
@@ -73,8 +73,8 @@ const HeroSection = () => {
                 </div>
             </div>
 
-            {/* Scroll Indicator */}
-            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center opacity-50 z-10">
+            {/* Scroll Indicator - Hidden on mobile */}
+            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 hidden md:flex flex-col items-center opacity-50 z-10">
                 <span className="text-[10px] tracking-[0.2em] uppercase mb-2 text-white/80">
                     Scroll
                 </span>

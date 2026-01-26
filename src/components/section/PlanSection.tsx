@@ -192,7 +192,7 @@ const PlanSection = () => {
                                         priority
                                         fill
                                         sizes="80px"
-                                        className="object-contain p-2"
+                                        className="object-contain p-2 brightness-0 invert"
                                     />
                                 </div>
                                 <p className="text-sm text-stone-300 whitespace-pre-line">
