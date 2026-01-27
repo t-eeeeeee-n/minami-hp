@@ -3,15 +3,17 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { event } from "@/lib/gtag";
+import { FaChevronRight, FaTimes } from "react-icons/fa";
 
 const Campaign = () => {
     const [isVisible, setIsVisible] = useState(false);
+    const [isDismissed, setIsDismissed] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 0) {
+            if (window.scrollY > 400 && !isDismissed) {
                 setIsVisible(true);
-            } else {
+            } else if (window.scrollY <= 400) {
                 setIsVisible(false);
             }
         };
@@ -20,70 +22,77 @@ const Campaign = () => {
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
-    }, []);
+    }, [isDismissed]);
 
     const handleClick = () => {
         event({
-            action: 'click',
-            category: 'CampaignBanner',
-            label: 'campaign-bottom-banner',
+            action: "click",
+            category: "CampaignBanner",
+            label: "campaign-popup",
         });
     };
 
+    const handleDismiss = (e: React.MouseEvent) => {
+        e.preventDefault();
+        e.stopPropagation();
+        setIsDismissed(true);
+        setIsVisible(false);
+    };
+
+    if (isDismissed) return null;
+
     return (
         <div
-            className={`fixed bottom-0 left-1/2 transform -translate-x-1/2 w-full max-w-4xl flex justify-center py-4 px-6 md:py-4 md:px-0 z-50 transition-transform duration-300 ${
-                isVisible ? "translate-y-0" : "translate-y-full"
+            className={`fixed bottom-4 left-4 right-4 md:left-auto md:right-6 md:bottom-6 z-50 transition-all duration-500 ease-out ${
+                isVisible
+                    ? "translate-y-0 opacity-100"
+                    : "translate-y-8 opacity-0 pointer-events-none"
             }`}
         >
-
-            <Link href="/reserve" onClick={handleClick}>
-                <div
-                    className="bg-green-500 text-white py-2 px-2 flex items-center justify-center w-full rounded-lg shadow-lg animate-slide-vertical-sm"
+            <div className="relative">
+                {/* Dismiss Button */}
+                <button
+                    onClick={handleDismiss}
+                    className="absolute -top-2 -right-2 w-6 h-6 bg-stone-600 hover:bg-stone-500 text-white rounded-full flex items-center justify-center transition-colors z-10"
+                    aria-label="閉じる"
                 >
-                    {/* 左側のテキスト */}
-                    <div className="flex items-center mr-5 md:mr-10">
-                        <div
-                            className="bg-[#ffffff] text-green-500 font-bold text-lg md:text-xl rounded-full w-10 md:w-12 h-10 md:h-12 flex items-center justify-center"
-                        >
-                            ¥0
-                        </div>
+                    <FaTimes size={10} />
+                </button>
+
+                {/* Popup Card */}
+                <div className="bg-stone-800 rounded-[2rem] p-6 shadow-2xl w-full md:min-w-[280px] md:w-auto text-center md:text-left">
+                    {/* Label */}
+                    <p className="text-stone-400 text-xs tracking-widest mb-4">
+                        ウェブ限定キャンペーン
+                    </p>
+
+                    {/* Main Offer */}
+                    <div className="mb-2">
+                        <span className="text-white text-xl font-semibold">体験通常価格</span>
+                        <span className="text-stone-400 line-through text-sm mx-2">¥8,800</span>
+                        <span className="text-white text-lg mx-1">→</span>
+                        <span className="text-white text-2xl font-bold">¥0</span>
                     </div>
-                    <div className="flex flex-col items-center mr-5 md:mr-10 text-xs md:text-sm">
-                        <div className="font-bold">
-                            <p>ウェブ限定キャンペーン</p>
-                        </div>
-                        <div className="mt-1 md:mt-3 flex">
-                            <div className="flex flex-col items-center justify-center">
-                                <p>体験通常価格</p>
-                                <p>8,800円</p>
-                            </div>
-                            <div className="flex items-center mx-2">
-                                <span className="material-symbols-outlined">keyboard_double_arrow_right</span>
-                            </div>
-                            <div className="flex flex-col items-center font-bold">
-                                <p>今なら</p>
-                                <p><span>０</span>円 で実施中</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="text-white text-3xl font-bold">
-                        <span className="material-symbols-outlined">arrow_forward</span>
-                    </div>
+
+                    {/* Sub Offer */}
+                    <p className="text-stone-300 text-sm mb-6">
+                        今なら<span className="font-semibold text-white">0円で実施中</span>
+                    </p>
+
+                    {/* CTA Button */}
+                    <Link
+                        href="/reserve"
+                        onClick={handleClick}
+                        className="flex items-center justify-center w-full py-3 bg-stone-700 hover:bg-stone-600 text-white text-sm font-medium rounded-xl transition-colors group"
+                    >
+                        <span>今すぐ予約する</span>
+                        <FaChevronRight
+                            size={12}
+                            className="ml-2 group-hover:translate-x-1 transition-transform"
+                        />
+                    </Link>
                 </div>
-
-                {/*<div className="animate-slide-vertical-sm">*/}
-                {/*    <Image*/}
-                {/*        src="https://minami-hp.s3.ap-northeast-1.amazonaws.com/S__40100041.jpg"*/}
-                {/*        alt="hero"*/}
-                {/*        width={800}*/}
-                {/*        height={600}*/}
-                {/*        className="w-48 md:w-64 lg:w-80"*/}
-                {/*        priority*/}
-                {/*    />*/}
-                {/*</div>*/}
-            </Link>
-
+            </div>
         </div>
     );
 };

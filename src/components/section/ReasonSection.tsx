@@ -1,81 +1,103 @@
-"use client"
+"use client";
 
 import Image from "next/image";
-import SectionTitle from "@/components/section/SectionTitle";
 import Link from "next/link";
+import { FaUsers, FaClock, FaStar, FaHeart } from "react-icons/fa";
 
 const reasons = [
     {
         id: 1,
         title: "オーダートレーニング\n×ベストフード",
+        description: "一人ひとりに合わせた運動プログラムと食事指導で、最適なアプローチをご提案します。",
         imgSrc: "https://minami-hp.s3.ap-northeast-1.amazonaws.com/S__15990807.avif",
+        icon: <FaHeart size={24} />,
     },
     {
         id: 2,
         title: "整体によるケア",
+        description: "トレーニングだけでなく、整体で身体のバランスを整え、効果を最大化します。",
         imgSrc: "https://minami-hp.s3.ap-northeast-1.amazonaws.com/S__15990809.avif",
+        icon: <FaStar size={24} />,
     },
     {
         id: 3,
         title: "美容・医療のご紹介",
+        description: "提携する美容・医療サービスをご紹介。トータルビューティをサポートします。",
         imgSrc: "https://minami-hp.s3.ap-northeast-1.amazonaws.com/S__39600168.jpg",
+        icon: <FaUsers size={24} />,
     },
     {
         id: 4,
         title: "コーチング",
+        description: "モチベーション維持のためのメンタルサポートで、継続を強力にバックアップ。",
         imgSrc: "https://minami-hp.s3.ap-northeast-1.amazonaws.com/S__15990811.avif",
+        icon: <FaClock size={24} />,
     },
 ];
 
 const ReasonSection = () => {
     return (
-        <div className="max-w-4xl mx-auto">
-            <SectionTitle label="Reason">
-                <span className="noto-sans">INOUT</span>が選ばれる<br/>
-                <span className="text-primary text-xl font-bold"><span className="text-as-primary text-3xl">4</span>つの理由</span>
-            </SectionTitle>
-            {/* メソッドリスト */}
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-3xl lg:max-w-5xl mx-auto mb-12"
-                 style={{placeItems: "center"}}>
+        <div className="max-w-6xl mx-auto px-6">
+            {/* Header */}
+            <div className="flex flex-col items-center mb-16 md:mb-20">
+                <span className="text-stone-400 font-bold tracking-widest text-xs uppercase mb-3">
+                    REASON
+                </span>
+                <h2 className="text-2xl md:text-3xl font-semibold text-stone-800 text-center">
+                    INOUTが選ばれる理由
+                </h2>
+                <p className="text-stone-400 mt-4 text-sm font-light">
+                    あなたに寄り添う4つの特徴
+                </p>
+            </div>
+
+            {/* Reason Cards - 2x2 Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-12">
                 {reasons.map((reason) => (
                     <div
                         key={reason.id}
-                        className="text-center flex flex-col items-center relative"
+                        className="group bg-white p-8 rounded-[2rem] shadow-xl shadow-stone-200/40 hover:shadow-2xl hover:-translate-y-1 transition-all duration-500"
                     >
-                        {/* 番号 */}
-                        <div
-                            className="absolute top-0 left-0 w-8 h-8 md:w-16 md:h-16 text-as-primary text-xl md:text-3xl font-bold flex items-center justify-center rounded-full z-10"
-                        >
-                            {reason.id < 10 ? `0${reason.id}` : reason.id}
-                        </div>
+                        <div className="flex items-start gap-6">
+                            {/* Image */}
+                            <div className="relative flex-shrink-0">
+                                <span className="absolute -top-2 -left-2 text-4xl font-light text-stone-100 z-0">
+                                    {String(reason.id).padStart(2, "0")}
+                                </span>
+                                <div className="relative w-20 h-20 rounded-2xl overflow-hidden shadow-lg z-10">
+                                    <Image
+                                        src={reason.imgSrc}
+                                        alt={reason.title}
+                                        priority
+                                        width={80}
+                                        height={80}
+                                        sizes="80px"
+                                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                    />
+                                </div>
+                            </div>
 
-                        {/* 画像 */}
-                        <div
-                            className="relative mb-4 w-36 h-36 sm:w-52 sm:h-52 lg:w-36 lg:h-36 rounded-full overflow-hidden shadow-lg">
-                            <Image
-                                src={reason.imgSrc}
-                                alt={reason.title}
-                                priority
-                                width={500}
-                                height={500}
-                                className="w-full h-full object-cover"
-                            />
+                            {/* Content */}
+                            <div className="flex-1 pt-1">
+                                <h3 className="text-base md:text-lg font-semibold text-stone-800 mb-2 whitespace-pre-line leading-snug">
+                                    {reason.title}
+                                </h3>
+                                <p className="text-sm text-stone-500 leading-relaxed font-light">
+                                    {reason.description}
+                                </p>
+                            </div>
                         </div>
-
-                        {/* タイトル */}
-                        <p className="h-12 text-sm md:text-base font-bold whitespace-pre-line">
-                            {reason.title}
-                        </p>
                     </div>
                 ))}
             </div>
 
+            {/* CTA Button */}
             <div className="text-center">
-                <Link href="/method" passHref>
-                    <button
-                        className="px-8 py-3 bg-accent text-on-accent rounded-3xl shadow hover:bg-secondary-dark transition">
-                        詳しくはこちら
-                    </button>
+                <Link
+                    href="/method"
+                    className="inline-flex items-center justify-center px-10 py-4 bg-stone-800 text-white text-sm font-medium rounded-full hover:bg-stone-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+                >
+                    詳しくはこちら
                 </Link>
             </div>
         </div>
