@@ -4,8 +4,6 @@ import '@/styles/globalFont.css'
 
 import { Metadata } from 'next';
 import React from "react";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import {Toaster} from "react-hot-toast";
 import {DEFAULT_METADATA} from "@/constants/metadata";
 import {DEFAULT_SCHEMA_ORG_JSON} from "@/constants/schema";
@@ -36,9 +34,7 @@ export default function RootLayout({ children }: { children: React.ReactNode; })
                 className: 'single-line-toast',
             }}
         />
-        <Header/>
         {children}
-        <Footer/>
         </body>
         </html>
     );

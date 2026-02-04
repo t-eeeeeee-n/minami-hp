@@ -23,11 +23,12 @@ const Header = () => {
     };
 
     const navLinks = [
-        { name: "ABOUT", href: "#about-us" },
-        { name: "FEATURES", href: "#features" },
-        { name: "PLAN", href: "#plan" },
-        { name: "TRAINER", href: "#profile" },
-        { name: "ACCESS", href: "#access" },
+        { name: "ABOUT", href: "/#about-us" },
+        { name: "FEATURES", href: "/#features" },
+        { name: "PLAN", href: "/#plan" },
+        { name: "TRAINER", href: "/#profile" },
+        { name: "ACCESS", href: "/#access" },
+        { name: "BLOG", href: "/blog", isPage: true },
     ];
 
     return (
@@ -60,15 +61,25 @@ const Header = () => {
 
                     {/* Desktop Nav */}
                     <nav className="hidden md:flex items-center space-x-10">
-                        {navLinks.map((link) => (
-                            <a
-                                key={link.name}
-                                href={link.href}
-                                className="text-xs font-medium text-stone-500 hover:text-stone-900 transition-colors tracking-widest"
-                            >
-                                {link.name}
-                            </a>
-                        ))}
+                        {navLinks.map((link) =>
+                            link.isPage ? (
+                                <Link
+                                    key={link.name}
+                                    href={link.href}
+                                    className="text-xs font-medium text-stone-500 hover:text-stone-900 transition-colors tracking-widest"
+                                >
+                                    {link.name}
+                                </Link>
+                            ) : (
+                                <a
+                                    key={link.name}
+                                    href={link.href}
+                                    className="text-xs font-medium text-stone-500 hover:text-stone-900 transition-colors tracking-widest"
+                                >
+                                    {link.name}
+                                </a>
+                            )
+                        )}
                         <Link
                             href="/reserve"
                             className="px-6 py-3 bg-stone-800 text-white text-xs font-medium rounded-full hover:bg-stone-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"

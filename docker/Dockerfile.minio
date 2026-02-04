@@ -1,0 +1,6 @@
+FROM minio/minio:latest
+
+COPY docker/minio-entrypoint.sh /usr/local/bin/minio-entrypoint.sh
+RUN chmod +x /usr/local/bin/minio-entrypoint.sh
+
+ENTRYPOINT ["/usr/local/bin/minio-entrypoint.sh"]
