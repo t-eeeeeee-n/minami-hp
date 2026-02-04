@@ -12,12 +12,18 @@ import TestimonialsSection from "@/components/section/TestimonialsSection";
 import ProfileSection from "@/components/section/ProfileSection";
 import TrialFlowSection from "@/components/section/TrialFlowSection";
 import AccessSection from "@/components/section/AccessSection";
+import BlogSection from "@/components/section/BlogSection";
 import Campaign from "@/components/Campaign";
 import React, { useEffect, useRef } from "react";
 import FeaturesSection from "@/components/section/FeaturesSection";
 import { event as gtagEvent } from "@/lib/gtag";
+import { BlogPostWithCategory } from "@/lib/s3";
 
-const Client = () => {
+interface ClientProps {
+    recentPosts?: BlogPostWithCategory[];
+}
+
+const Client: React.FC<ClientProps> = ({ recentPosts = [] }) => {
     const sentScrollPercents = useRef<{ [key: number]: boolean }>({});
 
     useEffect(() => {
@@ -129,6 +135,15 @@ const Client = () => {
                         <AccessSection />
                     </FadeIn>
                 </section>
+
+                {/* Blog Section */}
+                {recentPosts.length > 0 && (
+                    <section id="blog" className="py-24 md:py-32 bg-white px-6 lg:px-12">
+                        <FadeIn>
+                            <BlogSection posts={recentPosts} />
+                        </FadeIn>
+                    </section>
+                )}
             </main>
         </div>
     );

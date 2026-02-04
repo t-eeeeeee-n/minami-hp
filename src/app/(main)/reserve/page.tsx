@@ -1,6 +1,6 @@
 import React from "react";
 import { Metadata } from 'next';
-import Client from "@/app/reserve/client";
+import Client from "./client";
 
 export const metadata: Metadata = {
     title: '体験予約 - INOUTジム',

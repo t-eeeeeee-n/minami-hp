@@ -4,20 +4,12 @@ FROM node:20.9-bullseye-slim
 # 作業ディレクトリを設定
 WORKDIR /app
 
-# 必要なツールをインストール (curl, unzip)
-RUN apt-get update && apt-get install -y curl unzip && rm -rf /var/lib/apt/lists/*
-
-# bunのインストール
-RUN curl -fsSL https://bun.sh/install | bash
-ENV PATH="/root/.bun/bin:${PATH}"
-
 # 依存関係をインストール (メモリ使用を最小化する工夫を加える)
 # 1. 先にパッケージ関連ファイルのみをコピー
-COPY package.json /app/
-COPY bun.lockb /app/
+COPY package.json package-lock.json /app/
 
 # 2. 依存関係をインストール
-RUN bun install
+RUN npm ci
 
 # ソースコードをコピー (キャッシュを有効に活用)
 COPY ./ /app/

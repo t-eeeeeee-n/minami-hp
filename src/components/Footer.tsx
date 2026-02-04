@@ -15,6 +15,7 @@ const Footer = () => {
         { name: "PLAN", id: "plan" },
         { name: "TRAINER", id: "profile" },
         { name: "ACCESS", id: "access" },
+        { name: "BLOG", id: null, path: "/blog", isPage: true },
     ];
 
     return (
@@ -74,15 +75,25 @@ const Footer = () => {
 
                         {/* Nav Links */}
                         <nav className="flex flex-wrap justify-center gap-6">
-                            {navLinks.map((link) => (
-                                <button
-                                    key={link.name}
-                                    onClick={() => navigateAndScroll(link.id, "/")}
-                                    className="text-xs font-medium text-stone-500 hover:text-white transition-colors tracking-widest"
-                                >
-                                    {link.name}
-                                </button>
-                            ))}
+                            {navLinks.map((link) =>
+                                link.isPage ? (
+                                    <Link
+                                        key={link.name}
+                                        href={link.path!}
+                                        className="text-xs font-medium text-stone-500 hover:text-white transition-colors tracking-widest"
+                                    >
+                                        {link.name}
+                                    </Link>
+                                ) : (
+                                    <button
+                                        key={link.name}
+                                        onClick={() => navigateAndScroll(link.id!, "/")}
+                                        className="text-xs font-medium text-stone-500 hover:text-white transition-colors tracking-widest"
+                                    >
+                                        {link.name}
+                                    </button>
+                                )
+                            )}
                         </nav>
 
                         {/* Social Links */}

@@ -19,6 +19,7 @@ const Hamburger: FC<HamburgerProps> = ({ isOpen, toggleMenu }) => {
         { name: "PLAN", id: "plan", path: "/" },
         { name: "TRAINER", id: "profile", path: "/" },
         { name: "ACCESS", id: "access", path: "/" },
+        { name: "BLOG", id: null, path: "/blog", isPage: true },
     ];
 
     return (
@@ -30,19 +31,30 @@ const Hamburger: FC<HamburgerProps> = ({ isOpen, toggleMenu }) => {
             aria-modal="true"
         >
             {/* Nav Links */}
-            {navLinks.map((link) => (
-                <button
-                    key={link.name}
-                    onClick={() => {
-                        navigateAndScroll(link.id, link.path).then(() => {
-                            toggleMenu();
-                        });
-                    }}
-                    className="text-xl font-light text-stone-800 tracking-widest hover:text-stone-400 transition-colors"
-                >
-                    {link.name}
-                </button>
-            ))}
+            {navLinks.map((link) =>
+                link.isPage ? (
+                    <Link
+                        key={link.name}
+                        href={link.path}
+                        onClick={toggleMenu}
+                        className="text-xl font-light text-stone-800 tracking-widest hover:text-stone-400 transition-colors"
+                    >
+                        {link.name}
+                    </Link>
+                ) : (
+                    <button
+                        key={link.name}
+                        onClick={() => {
+                            navigateAndScroll(link.id!, link.path).then(() => {
+                                toggleMenu();
+                            });
+                        }}
+                        className="text-xl font-light text-stone-800 tracking-widest hover:text-stone-400 transition-colors"
+                    >
+                        {link.name}
+                    </button>
+                )
+            )}
 
             {/* CTA Button */}
             <Link

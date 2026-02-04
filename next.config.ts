@@ -8,6 +8,12 @@ const nextConfig: NextConfig = {
                 hostname: 'minami-hp.s3.ap-northeast-1.amazonaws.com',
                 pathname: '/**',
             },
+            {
+                protocol: 'http',
+                hostname: 'localhost',
+                port: '9000',
+                pathname: '/**',
+            },
         ],
         qualities: [75, 90, 100],
     },
