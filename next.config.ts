@@ -17,18 +17,6 @@ const nextConfig: NextConfig = {
         ],
         qualities: [75, 90, 100],
     },
-    // Turbopack設定（Next.js 16以降で必要）
-    turbopack: {},
-    // 開発環境用のwebpack設定
-    webpack: (config, { dev }) => {
-        if (dev) {
-            config.watchOptions = {
-                poll: 1000,
-                aggregateTimeout: 300,
-            };
-        }
-        return config;
-    },
 };
 
 export default nextConfig;
