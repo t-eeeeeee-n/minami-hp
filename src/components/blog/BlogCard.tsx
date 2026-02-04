@@ -20,7 +20,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ post, featured = false }) => {
       <Link href={`/blog/${post.slug}`} className="block h-full">
         {/* Image Container */}
         <div
-          className={`relative overflow-hidden ${
+          className={`relative overflow-hidden rounded-t-3xl ${
             featured ? "aspect-[16/10]" : "aspect-[4/3]"
           }`}
         >
