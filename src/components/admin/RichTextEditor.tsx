@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useCallback } from "react";
+import React, { useCallback, useState } from "react";
 import { useEditor, EditorContent } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import Image from "@tiptap/extension-image";
@@ -19,6 +19,10 @@ import {
   FaUndo,
   FaRedo,
 } from "react-icons/fa";
+import { FaSquareArrowUpRight } from "react-icons/fa6";
+import LinkCardModal, { PageInfo } from "./LinkCardModal";
+import TextLinkModal from "./TextLinkModal";
+import { LinkCard } from "./extensions/LinkCard";
 
 interface RichTextEditorProps {
   content: string;
@@ -31,6 +35,10 @@ const RichTextEditor: React.FC<RichTextEditorProps> = ({
   onChange,
   placeholder = "記事の本文を入力...",
 }) => {
+  const [isLinkCardModalOpen, setIsLinkCardModalOpen] = useState(false);
+  const [isTextLinkModalOpen, setIsTextLinkModalOpen] = useState(false);
+  const [currentLinkUrl, setCurrentLinkUrl] = useState("");
+
   const editor = useEditor({
     extensions: [
       StarterKit.configure({
@@ -52,6 +60,7 @@ const RichTextEditor: React.FC<RichTextEditorProps> = ({
       Placeholder.configure({
         placeholder,
       }),
+      LinkCard,
     ],
     content,
     immediatelyRender: false,
@@ -76,61 +85,63 @@ const RichTextEditor: React.FC<RichTextEditorProps> = ({
       if (!file) return;
 
       try {
-        // 署名付きURLを取得
+        const formData = new FormData();
+        formData.append("file", file);
+
         const response = await fetch("/api/admin/upload", {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            filename: file.name,
-            contentType: file.type,
-          }),
+          body: formData,
         });
 
         if (!response.ok) {
-          throw new Error("アップロードURLの取得に失敗しました");
+          const data = await response.json();
+          throw new Error(data.error || "画像のアップロードに失敗しました");
         }
 
-        const { uploadUrl, imageUrl } = await response.json();
-
-        // S3に直接アップロード
-        const uploadResponse = await fetch(uploadUrl, {
-          method: "PUT",
-          body: file,
-          headers: {
-            "Content-Type": file.type,
-          },
-        });
-
-        if (!uploadResponse.ok) {
-          throw new Error("画像のアップロードに失敗しました");
-        }
+        const { imageUrl } = await response.json();
 
         // エディタに画像を挿入
         editor?.chain().focus().setImage({ src: imageUrl }).run();
-      } catch (error) {
+      } catch (error: unknown) {
         console.error("Image upload error:", error);
-        alert("画像のアップロードに失敗しました");
+        const message = error instanceof Error ? error.message : "画像のアップロードに失敗しました";
+        alert(message);
       }
     };
 
     input.click();
   }, [editor]);
 
-  const setLink = useCallback(() => {
-    const previousUrl = editor?.getAttributes("link").href;
-    const url = window.prompt("URLを入力してください", previousUrl);
-
-    if (url === null) {
-      return;
-    }
-
-    if (url === "") {
-      editor?.chain().focus().extendMarkRange("link").unsetLink().run();
-      return;
-    }
-
-    editor?.chain().focus().extendMarkRange("link").setLink({ href: url }).run();
+  const openTextLinkModal = useCallback(() => {
+    const previousUrl = editor?.getAttributes("link").href || "";
+    setCurrentLinkUrl(previousUrl);
+    setIsTextLinkModalOpen(true);
   }, [editor]);
+
+  const handleTextLinkInsert = useCallback(
+    (url: string) => {
+      editor?.chain().focus().extendMarkRange("link").setLink({ href: url }).run();
+    },
+    [editor]
+  );
+
+  const handleTextLinkRemove = useCallback(() => {
+    editor?.chain().focus().extendMarkRange("link").unsetLink().run();
+  }, [editor]);
+
+  const handleLinkCardInsert = useCallback(
+    (pageInfo: PageInfo) => {
+      editor?.chain().focus().setLinkCard({
+        url: pageInfo.url,
+        title: pageInfo.title,
+        description: pageInfo.description || undefined,
+        image: pageInfo.image || undefined,
+        favicon: pageInfo.favicon || undefined,
+        siteName: pageInfo.siteName || undefined,
+      }).run();
+    },
+    [editor]
+  );
 
   if (!editor) {
     return null;
@@ -238,8 +249,12 @@ const RichTextEditor: React.FC<RichTextEditorProps> = ({
 
         <div className="w-px h-6 bg-stone-200 mx-1" />
 
-        <ToolbarButton onClick={setLink} isActive={editor.isActive("link")} title="リンク">
+        <ToolbarButton onClick={openTextLinkModal} isActive={editor.isActive("link")} title="テキストリンク">
           <FaLink className="w-4 h-4" />
+        </ToolbarButton>
+
+        <ToolbarButton onClick={() => setIsLinkCardModalOpen(true)} title="リンクカードを挿入">
+          <FaSquareArrowUpRight className="w-4 h-4" />
         </ToolbarButton>
 
         <ToolbarButton onClick={addImage} title="画像を挿入">
@@ -275,6 +290,23 @@ const RichTextEditor: React.FC<RichTextEditorProps> = ({
           pointer-events: none;
         }
       `}</style>
+
+      {/* Text Link Modal */}
+      <TextLinkModal
+        isOpen={isTextLinkModalOpen}
+        onClose={() => setIsTextLinkModalOpen(false)}
+        onInsert={handleTextLinkInsert}
+        onRemove={handleTextLinkRemove}
+        initialUrl={currentLinkUrl}
+        hasSelection={editor ? !editor.state.selection.empty : false}
+      />
+
+      {/* Link Card Modal */}
+      <LinkCardModal
+        isOpen={isLinkCardModalOpen}
+        onClose={() => setIsLinkCardModalOpen(false)}
+        onInsert={handleLinkCardInsert}
+      />
     </div>
   );
 };
