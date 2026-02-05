@@ -86,6 +86,14 @@ jobs:
             echo "EMAIL_FROM=${{ secrets.EMAIL_FROM }}" > .env
             echo "EMAIL_TO=${{ secrets.EMAIL_TO }}" >> .env
             echo "EMAIL_PASS=${{ secrets.EMAIL_PASS }}" >> .env
+            echo "AWS_REGION=${{ secrets.AWS_REGION }}" >> .env
+            echo "AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }}" >> .env
+            echo "AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}" >> .env
+            echo "S3_BUCKET=${{ secrets.S3_BUCKET }}" >> .env
+            echo "ADMIN_PASSWORD=${{ secrets.ADMIN_PASSWORD }}" >> .env
+            echo "ADMIN_JWT_SECRET=${{ secrets.ADMIN_JWT_SECRET }}" >> .env
+            echo "UPSTASH_REDIS_REST_URL=${{ secrets.UPSTASH_REDIS_REST_URL }}" >> .env
+            echo "UPSTASH_REDIS_REST_TOKEN=${{ secrets.UPSTASH_REDIS_REST_TOKEN }}" >> .env
           
             # Restart services with the new configuration
             docker-compose down
