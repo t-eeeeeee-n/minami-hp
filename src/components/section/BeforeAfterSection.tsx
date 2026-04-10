@@ -6,11 +6,6 @@ import Image from "next/image";
 const BeforeAfterSection = () => {
     const results = [
         {
-            imageSrc: "https://minami-hp.s3.ap-northeast-1.amazonaws.com/S__39559220.jpg",
-            period: "3ヶ月",
-            age: "50代男性",
-        },
-        {
             imageSrc: "https://minami-hp.s3.ap-northeast-1.amazonaws.com/S__39559218.jpg",
             period: "3ヶ月",
             age: "40代女性",
