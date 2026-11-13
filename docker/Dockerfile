@@ -1,5 +1,5 @@
 # ベースイメージとしてNode.jsの軽量版を使用
-FROM node:20.9-bullseye-slim
+FROM node:24-bookworm-slim
 
 # 作業ディレクトリを設定
 WORKDIR /app
